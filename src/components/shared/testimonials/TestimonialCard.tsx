@@ -4,12 +4,12 @@ import { TestimonialProps } from "@/types/types";
 import Image from "next/image";
 import MediumHeading from "../text/MediumHeading";
 import SmallParagraph from "../text/SmallParagraph";
+import { assests } from "../../../../public/assests";
 
 export const TestimonialCard: React.FC<TestimonialProps> = ({
   rating,
   author,
   content,
-  imageSrc,
 }) => {
   return (
     <CardContainer>
@@ -21,7 +21,7 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
               height={28}
               width={28}
               loading="lazy"
-              src={imageSrc}
+              src={assests.STAR}
               alt={`${rating} rating`}
             />
           ))}
@@ -35,7 +35,11 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
       <MediumHeading fontSize="large" alignment="center">
         {author}
       </MediumHeading>
-      <SmallParagraph alignment="center" fontSize="large">
+      <SmallParagraph
+        fontFamily="hindRegular"
+        alignment="center"
+        fontSize="large"
+      >
         {content}
       </SmallParagraph>
     </CardContainer>
@@ -43,44 +47,50 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
 };
 
 const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 300px; /* Adjust as needed */
+  padding: 55px;
   border-radius: 15px;
   background-color: rgba(247, 209, 197, 1);
-  display: flex;
-  padding: 30px;
-  margin: 0 auto;
-  align-items: center;
-  gap: 20px;
   color: rgba(0, 0, 0, 1);
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 480px;
-  width: 100%;
-  font: 400 30px/1 Palmer Lake Print, -apple-system, Roboto, Helvetica,
-    sans-serif;
+  min-width: 390px;
 
   @media (max-width: 640px) {
-    padding: 20px;
-    gap: 15px;
+    min-height: 280px; /* Adjust for mobile */
   }
 `;
+
 const RatingMain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 `;
+
 const RatingStars = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const RatingImage = styled(Image)`
-  aspect-ratio: 5.15;
+  aspect-ratio: 1;
   object-fit: contain;
-  object-position: center;
-  /* width: 200px; */
-  align-self: center;
-  margin: 0;
+  width: 24px;
+  height: 24px;
+
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 18px;
+    height: 18px;
+  }
 `;
 
 const Divider = styled.div`
@@ -114,4 +124,14 @@ const TestimonialText = styled.div`
   text-align: left;
   max-width: 100%;
   font: 18px/25px Hind, sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;

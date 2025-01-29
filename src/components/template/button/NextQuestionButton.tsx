@@ -1,5 +1,5 @@
-import { NextQuestionButtonProps } from '@/types/FormTypes';
-import styled from 'styled-components';
+import { NextQuestionButtonProps } from "@/types/FormTypes";
+import styled from "styled-components";
 
 export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   children,
@@ -11,7 +11,11 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
 }) => {
   return (
     <ButtonWrapper>
-      <StartButton type={type as "button" | "submit" | "reset" | undefined} onClick={onClick} height={height}>
+      <StartButton
+        type={type as "button" | "submit" | "reset" | undefined}
+        onClick={onClick}
+        height={height}
+      >
         {children}
       </StartButton>
       {completionTime && (
@@ -35,13 +39,13 @@ const ButtonWrapper = styled.div`
 
 const StartButton = styled.button<{ height?: string }>`
   display: flex;
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   justify-content: center;
   align-items: center;
   width: 100%;
   border-radius: 30px;
-  background-color: #DB3512;
-  color: #FEFAF5;
+  background-color: #db3512;
+  color: #fefaf5;
   font-family: var(--font-hind-medium);
   font-size: 1.375rem;
   padding: 16px 30px;
