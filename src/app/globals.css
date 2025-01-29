@@ -12,9 +12,41 @@
   src: url(../../public/assests/fonts/hind/Hind-Regular.ttf);
 }
 
+@font-face {
+  font-family: Hind-Bold;
+  src: url(../../public/assests/fonts/Hind/Hind-Bold.ttf);
+}
+
+@font-face {
+  font-family: Hind-Regular;
+  src: url(../../public/assests/fonts/Hind/Hind-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hind-Medium;
+  src: url(../../public/assests/fonts/Hind/Hind-Medium.ttf);
+}
+
+@font-face {
+  font-family: Hind-Semi-Bold;
+  src: url(../../public/assests/fonts/Hind/Hind-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Mulish-Mixed;
+  src: url(../../public/assests/fonts/Mulish/Mulish-VariableFont_wght.ttf);
+}
+
 :root {
   --font-palmerlakescript-regular: "PalmerLakeScript-Regular";
-  /* --font-palmerLake-Script-Regular: plamerLake-Script-Regular; */
+  --font-palmerlakeprint-regular: "PalmerLakePrint-Regular";
+  --font-hind-bold: "Hind-Bold";
+  --font-hind-regular: "Hind-Regular";
+  --font-hind-medium: "Hind-Medium";
+  --font-hind-semi-bold: "Hind-Semi-Bold";
+  --font-mulish-mixed: "Mulish-Mixed";
+  --color-basic-white: #ffffff;
+  --color-basic-black: #000000;
   --background: #ffffff;
   --foreground: #171717;
   --font-palmerlakeprint-regular: "PalmerLakePrint-Regular";
