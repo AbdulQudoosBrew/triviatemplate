@@ -1,9 +1,16 @@
 @font-face {
   font-family: PalmerLakePrint-Regular;
-  src: url(../../public/assests/fonts/PalmerLakePrint/PalmerLakePrint-Regular.ttf);
+  src: url(../../public/assest/fonts/plamerLake/PalmerLakePrint-Regular.ttf);
+}
+
+@font-face {
+  font-family: PalmerLakeScript-Regular;
+  src: url(../../public/assest/fonts/plamerLake/PalmerLakeScript-Regular.ttf);
 }
 
 :root {
+  --font-palmerlakescript-regular: "PalmerLakeScript-Regular";
+  /* --font-palmerLake-Script-Regular: plamerLake-Script-Regular; */
   --background: #ffffff;
   --foreground: #171717;
   --font-palmerlakeprint-regular: "PalmerLakePrint-Regular";

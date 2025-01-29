@@ -1,7 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { TestimonialSection } from "@/components/shared/testimonials/TestimonialSection";
+import { MainQuiz } from "@/components/shared/pageSection/homePageSection/MainQuiz";
 
 export default function Home() {
-  return <TestimonialSection />;
+  return (
+    <>
+      <MainQuiz />
+    </>
+  );
 }
