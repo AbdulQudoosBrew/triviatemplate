@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { HeroSection } from "./HeroSection";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import { assests } from "../../../../../public/assests/index";
-import { QuizIntro } from "./QuizIntro";
+import { QuizIntro } from "./quizIntro";
 
 export const MainQuiz: React.FC = () => {
   const handleStartQuiz = () => {
@@ -13,7 +13,12 @@ export const MainQuiz: React.FC = () => {
 
   return (
     <QuizContainer>
-      <LogoImage src={assests.SOYUMMY_MAIN_LOGO} alt="main-logo" width={115} height={27} />
+      <LogoImage
+        src={assests.SOYUMMY_MAIN_LOGO}
+        alt="main-logo"
+        width={115}
+        height={27}
+      />
       <HeroSection />
       <QuizIntro />
       <ActionButton
@@ -44,4 +49,4 @@ const QuizContainer = styled.main`
 const LogoImage = styled.img`
   margin: 10px auto;
   object-fit: contain;
-`
+`;
