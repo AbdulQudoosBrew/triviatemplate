@@ -1,15 +1,19 @@
 import { NextQuestionButtonProps } from '@/types/FormTypes';
 import styled from 'styled-components';
 
-export const ActionButton: React.FC<NextQuestionButtonProps> = ({ 
-  label, 
-  onClick, 
+export const ActionButton: React.FC<NextQuestionButtonProps> = ({
+  children,
+  type = "button" as "button" | "submit" | "reset" | undefined,
+  onClick,
   completionTime,
-  timerIcon 
+  timerIcon,
+  height,
 }) => {
   return (
     <ButtonWrapper>
-      <StartButton onClick={onClick}>{label}</StartButton>
+      <StartButton type={type as "button" | "submit" | "reset" | undefined} onClick={onClick} height={height}>
+        {children}
+      </StartButton>
       {completionTime && (
         <TimeInfo>
           {timerIcon && <TimerIcon src={timerIcon} alt="" loading="lazy" />}
@@ -29,17 +33,20 @@ const ButtonWrapper = styled.div`
   margin-top: 48px;
 `;
 
-const StartButton = styled.button`
+const StartButton = styled.button<{ height?: string }>`
+  display: flex;
+  height: ${props => props.height};
+  justify-content: center;
+  align-items: center;
   width: 100%;
   border-radius: 30px;
   background-color: #DB3512;
-  box-shadow: 0px 0px 16px rgba(211, 58, 72, 0.2);
   color: #FEFAF5;
-  font: 500 22px/1 Hind, sans-serif;
+  font-family: var(--font-hind-medium);
+  font-size: 1.375rem;
   padding: 16px 30px;
   border: none;
   cursor: pointer;
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
 `;
 
 const TimeInfo = styled.div`
@@ -56,6 +63,7 @@ const TimerIcon = styled.img`
 `;
 
 const TimeText = styled.span`
-  font: 400 14px/1 Mulish, sans-serif;
-  color: #000;
+  font-family: var(--font-mulish-mixed);
+  color: #000000;
+  font-size: 0.875rem;
 `;

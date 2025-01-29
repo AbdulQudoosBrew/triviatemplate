@@ -9,7 +9,7 @@ export const HeroSection = () => {
         alt="background"
         loading="lazy"
       />
-      <HeroTitle>DIG INTO FUN</HeroTitle>
+      <HeroTitle>DIG <br /> INTO <br /> FUN</HeroTitle>
     </HeroWrapper>
   );
 };
@@ -20,7 +20,6 @@ const HeroWrapper = styled.section`
   aspect-ratio: 0.901;
   width: 100%;
   max-width: 319px;
-  margin-top: 53px;
 `;
 
 const HeroImage = styled.img`
@@ -34,9 +33,12 @@ const HeroImage = styled.img`
 
 const HeroTitle = styled.h1`
   position: relative;
-  color: #fff;
-  font: 700 40px/34px Hind, sans-serif;
-  border: 5px solid #fff;
+  color: var(--color-basic-white);
+  font-family: var(--font-hind-bold);
+  font-size: 2.5rem;
+  border: 5px solid var(--color-basic-white);
   border-radius: 15px;
-  padding: 48px 6px 154px;
+  padding: 45px 13px 182px;
+  margin: 7px 7px 0 0;
+  line-height: 34px;
 `;
