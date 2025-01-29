@@ -1,13 +1,17 @@
-import styled from 'styled-components';
-import { assests } from '../../../../../public';
+import styled from "styled-components";
+import { assests } from "../../../../../public/assests";
 
 export const HeroSection = () => {
-    return (
-        <HeroWrapper>
-            <HeroImage src={assests.MAIN_BACKGROUNG_IMAHE} alt="background" loading="lazy" />
-            <HeroTitle>DIG INTO FUN</HeroTitle>
-        </HeroWrapper>
-    );
+  return (
+    <HeroWrapper>
+      <HeroImage
+        src={assests.MAIN_BACKGROUNG_IMAHE}
+        alt="background"
+        loading="lazy"
+      />
+      <HeroTitle>DIG INTO FUN</HeroTitle>
+    </HeroWrapper>
+  );
 };
 
 const HeroWrapper = styled.section`
