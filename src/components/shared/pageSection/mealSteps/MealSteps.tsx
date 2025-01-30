@@ -4,26 +4,24 @@ import styled from "styled-components";
 import { StepCard } from "./StepCard";
 import { MealStepsProps } from "@/types/types";
 import Divider from "@/components/template/Divider";
-import HeaderLarge from '@/components/template/text/HeaderLarge';
+import HeaderLarge from "@/components/template/text/HeaderLarge";
+import { assests } from "../../../../../public/assests";
 export const MealSteps: React.FC = () => {
   const steps = [
     {
       number: "1",
       title: "Choose Your Recipes",
-      iconSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/be552eb71fa05913e87e8057645f2b2c0c893225a428173ab39f00e277f1a008?placeholderIfAbsent=true&apiKey=74ec95439ecb4773a93cae1b5c68dfe1",
+      iconSrc: assests.DISH,
     },
     {
       number: "2",
       title: "We Deliver Everything You Need",
-      iconSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/be552eb71fa05913e87e8057645f2b2c0c893225a428173ab39f00e277f1a008?placeholderIfAbsent=true&apiKey=74ec95439ecb4773a93cae1b5c68dfe1",
+      iconSrc: assests.TRUCK,
     },
     {
       number: "3",
       title: "Cook & Enjoy",
-      iconSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/f58ad174562046345d90aa9805f570df4d0ff95670487ceed894949f4366e11f?placeholderIfAbsent=true&apiKey=74ec95439ecb4773a93cae1b5c68dfe1",
+      iconSrc: assests.CHEIF,
     },
   ];
 
@@ -31,7 +29,11 @@ export const MealSteps: React.FC = () => {
     <Container>
       <PromoBanner>
         <Divider />
-        <PromoText>Enjoy Up to 10 FREE Meals</PromoText>
+        <PromoText>
+          Enjoy Up to 10 FREE Meals
+          <StepIcon src={assests.PRICE_TAG} loading="lazy" alt="" />
+        </PromoText>
+
         <Divider />
       </PromoBanner>
       <HeaderLarge fontSize="medium">How it works:</HeaderLarge>
@@ -70,7 +72,12 @@ const Container = styled.section`
     padding: 0 10px;
   }
 `;
-
+const StepIcon = styled.img`
+  /* aspect-ratio: 1; */
+  /* object-fit: contain; */
+  /* object-position: center; */
+  /* width: 29px; */
+`;
 const PromoBanner = styled.div`
   display: flex;
   width: 100%;
@@ -88,10 +95,14 @@ const DashedLine = styled.div`
 `;
 
 const PromoText = styled.div`
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 1);
-  padding: 22px 31px;
+  padding: 18px 20px;
   border: 1px solid rgba(219, 53, 18, 1);
   margin: 18px 0;
   font: 600 18px/1 var(--font-hind-semi-bold);

@@ -36,9 +36,7 @@ const Heading = styled.h2<{
     fontSize === "medium"
       ? "1rem"
       : fontSize === "semiMedium"
-      ? "1.125"
-      : fontSize === "semiMedium"
-      ? "1.125"
+      ? "1.125rem"
       : "0.75rem"};
   font-family: ${({ fontFamily }) =>
     fontFamily === "hindBold"

@@ -20,4 +20,11 @@ export const assests = {
   RESAULTPENDING_ONE: "/assests/images/resault-pending-1.svg",
   RESAULTPENDING_TWO: "/assests/images/resault-pending-2.svg",
   RESAULTPENDING_THREE: "/assests/images/resault-pending-3.svg",
+  ENOURAGEMENT_STAT_TWO: "/assests/images/encouragement-stat-2.svg",
+  BUDGET_PAGE: "/assests/images/budget-page.svg",
+  PRICE_TAG: "/assests/images/pricetag.svg",
+  TRUCK: "/assests/images/truck.svg",
+  CHEIF: "/assests/images/cheif.svg",
+  DISH: "/assests/images/dish.svg",
+  PERFECT_MATCH: "/assests/images/matchimage.svg",
 };
