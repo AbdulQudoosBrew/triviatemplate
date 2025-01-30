@@ -42,6 +42,7 @@ const HeroContainer = styled.div`
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  margin-top: 10px;
   @media (max-width: 768px) {
     width: 100%;
     padding: 0 20px;
@@ -57,6 +58,7 @@ const Banner = styled.div`
   display: flex;
   width: 180px;
   height: 36px;
+  margin-top: 10px;
 `;
 
 const EmphasidText = styled.span`

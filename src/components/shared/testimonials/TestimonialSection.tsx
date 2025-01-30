@@ -82,6 +82,7 @@ const Container = styled.div`
   padding: 24px 0;
   margin-left: 10px;
   overflow: hidden;
+  margin-bottom: 200px;
 `;
 
 const ScrollContainer = styled.div`

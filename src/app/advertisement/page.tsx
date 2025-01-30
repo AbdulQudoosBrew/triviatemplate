@@ -3,6 +3,7 @@ import { TestimonialSection } from "@/components/shared/testimonials/Testimonial
 import { BenefitsSection } from "@/components/shared/pageSection/features/benefits/BenefitsSection";
 import { MealSteps } from "@/components/shared/pageSection/mealSteps/MealSteps";
 import { CookingHero } from "@/components/shared/pageSection/cookingHero/CookingHero";
+import { SpecialOfferBanner } from "@/components/shared/pageSection/specialOffer/SpecialOfferBanner";
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
       <MealSteps />;
       <BenefitsSection />;
       <TestimonialSection />;
+      <SpecialOfferBanner />;
     </>
   );
 };
