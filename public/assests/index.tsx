@@ -12,5 +12,8 @@ export const assests = {
   OPTION_TWO: "/assests/images/option-2.svg",
   OPTION_THREE: "/assests/images/option-3.svg",
   OPTION_FOUR: "/assests/images/option-4.svg",
+  STRESSFREE: "/assests/images/stressfree.svg",
+  FLEXIBILTY: "/assests/images/flexability.svg",
+  DELICIOUSNESS: "/assests/images/Deliciousness.svg",
   MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
 };

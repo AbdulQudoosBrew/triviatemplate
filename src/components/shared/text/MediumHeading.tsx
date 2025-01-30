@@ -38,18 +38,25 @@ const Heading = styled.h2<{
   textAlign?: string;
   lineHeight?: string;
 }>`
-  font-size: ${({ fontSize }) => (fontSize === "large" ? "1.875rem" : fontSize === "medium" ? "1.375rem" : "1.5rem")};
+  font-size: ${({ fontSize }) =>
+    fontSize === "large" ? "1.875rem" : "1.375rem"};
+  font-family: var(--font-palmerlakeprint-regular);
+  font-size: ${({ fontSize }) =>
+    fontSize === "large"
+      ? "1.875rem"
+      : fontSize === "medium"
+      ? "1.375rem"
+      : "1.5rem"};
   font-family: ${({ fontFamily }) =>
     fontFamily === "hindRegular"
       ? "var(--font-Hind-regular)"
       : fontFamily === "hindMedium"
-        ? "var(--font-hind-medium)"
-        : fontFamily === "hindBold"
-          ? "var(--font-hind-bold)"
-          : "var(--font-palmerlakeprint-regular)"
-  };
+      ? "var(--font-hind-medium)"
+      : fontFamily === "hindBold"
+      ? "var(--font-hind-bold)"
+      : "var(--font-palmerlakeprint-regular)"};
   letter-spacing: -0.12px;
-  line-height: ${({ lineHeight }) => lineHeight ? lineHeight : "1.875rem"};
+  line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : "1.875rem")};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => color || "var(--color-basic-black)"};
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
