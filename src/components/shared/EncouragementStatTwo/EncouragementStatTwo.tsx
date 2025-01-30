@@ -12,31 +12,39 @@ export default function EncouragementStatTwo() {
   return (
     <>
       <MainContainer>
+        <ContentWrapper>
         <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
         <HeaderLarge fontSize="medium">  SAVE MORE TIME,  <br /> ENJOY MORE MEAL!  </HeaderLarge>
         <Divider />
 
         <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
-        <ActionButton  setMarginTop="20px" height="56px"  type="button" onClick={handleWowButton}  >   WOW!  </ActionButton>
+        </ContentWrapper>
+        <ActionButton   height="56px"  type="button" onClick={handleWowButton}  >   WOW!  </ActionButton>
       </MainContainer>
     </>
   );
 }
-
+const ContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 5px;
+  `
 const MainContainer = styled.section`
   background-color: #fefaf5;
   display: flex;
   padding: 20px;
   margin: 0 auto;
   align-items: center;
-  gap: 10px;
   color: rgba(0, 0, 0, 1);
   text-align: center;
-  /* justify-content: center; */
   flex-direction: column;
   max-width: 480px;
   width: 100%;
   height: 100vh;
+  justify-content: space-between;
 `;
 
 const BrandLogo = styled.img`
