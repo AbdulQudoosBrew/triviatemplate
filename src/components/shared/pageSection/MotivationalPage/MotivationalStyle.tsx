@@ -1,16 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* border-radius: 0;
-  display: flex;
-  max-width: 327px;
-  flex-direction: column;
-  color: #000;
-  text-align: center;
-  font: 400 22px Hind, sans-serif;
-  justify-content: center;
-  align-items: center; */
-  /* gap: 10px; */
+position: relative;
   background-color: #fefaf5;
   display: flex;
   padding: 30px;
@@ -24,12 +15,13 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const IconImage = styled.img`
+export const IconImage = styled.img<{ marginBottom?: string }>`
   aspect-ratio: 1.59;
   object-fit: contain;
   object-position: center;
   width: 35px;
   align-self: center;
+  margin-bottom: ${({ marginBottom }) => marginBottom ? marginBottom : ""};
 `;
 
 export const Heading = styled.h1`
@@ -102,3 +94,11 @@ export const StrongSpan = styled.span`
   line-height: 27.6px;
   color: var(--color-basic-black);
 `
+
+export const PendingResultImage = styled.img`
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 1rem;
+`;
