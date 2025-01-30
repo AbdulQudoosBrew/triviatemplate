@@ -1,3 +1,4 @@
+import SmallParagraph from "@/components/shared/text/SmallParagraph";
 import { NextQuestionButtonProps } from "@/types/FormTypes";
 import styled from "styled-components";
 
@@ -23,7 +24,9 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
       {completionTime && (
         <TimeInfo>
           {timerIcon && <TimerIcon src={timerIcon} alt="" loading="lazy" />}
-          <TimeText>{completionTime}</TimeText>
+          <SmallParagraph fontSize="small" fontFamily="molishMixed" textAlign="center" lineHeight="12px">
+            {completionTime}
+          </SmallParagraph>
         </TimeInfo>
       )}
     </ButtonWrapper>
@@ -37,6 +40,7 @@ const ButtonWrapper = styled.div<{ maxWidth?: string; setMarginTop?: string }>`
   flex-direction: column;
   align-items: center;
   margin-top: ${({ setMarginTop }) => setMarginTop || ""};
+  padding: 0.625rem 0px;
 `;
 
 const StartButton = styled.button<{ height?: string; }>`
@@ -50,7 +54,7 @@ const StartButton = styled.button<{ height?: string; }>`
   color: #fefaf5;
   font-family: var(--font-hind-medium);
   font-size: 1.375rem;
-  padding: 16px 30px;
+  padding: 1rem 1.875rem;
   border: none;
   cursor: pointer;
 `;
@@ -59,17 +63,11 @@ const TimeInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-top: 12px;
+  margin: 12px 0px;
+  opacity: 80%;
 `;
 
 const TimerIcon = styled.img`
   width: 16px;
   height: 16px;
-  object-fit: contain;
-`;
-
-const TimeText = styled.span`
-  font-family: var(--font-mulish-mixed);
-  color: #000000;
-  font-size: 0.875rem;
 `;

@@ -21,9 +21,8 @@ export const HeroSection = () => {
 const HeroWrapper = styled.section`
   position: relative;
   border-radius: 15px;
-  aspect-ratio: 0.901;
   width: 100%;
-  /* height: 100%; */
+  margin: 12px 0px
 `;
 
 const HeroTitleDiv = styled.div`
@@ -34,10 +33,10 @@ position: relative;
   border: 5px solid var(--color-basic-white);
   border-radius: 15px;
   border-left: none;
-  padding-top: 1rem;
+  padding-top: 2rem;
   line-height: 34px;
   text-align: left;
-`
+`;
 
 const MainImageDiv = styled.div`
   position: relative;

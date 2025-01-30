@@ -8,6 +8,7 @@ export const OptionCard = ({ icon, text }: OptionCardProps) => {
       <CardContainer>
         <CardIcon loading="lazy" src={icon} alt="" />
         <SmallParagraph
+          textAlign="left"
           fontSize="large"
           fontFamily="hindRegular"
           color="#615F5F"

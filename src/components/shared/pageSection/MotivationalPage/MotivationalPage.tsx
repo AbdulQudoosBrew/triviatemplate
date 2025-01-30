@@ -47,7 +47,7 @@ const MotivationalPage: React.FC = () => {
                     alt="Food waste illustration"
                 />
             </InfoCard>
-            <SmallParagraph fontSize="small" fontFamily='hindRegular' lineHeight='12px' margin="20px 0px 0px" color="#A0A0A0">
+            <SmallParagraph fontSize="small" fontFamily='hindRegular' lineHeight='12px' margin="1.25rem 0.938rem 0px" color="#A0A0A0">
                 William & Mary. Study Calculates True Cost of Food Waste in America. 2020.
             </SmallParagraph>
             <ActionButton

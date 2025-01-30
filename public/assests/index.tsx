@@ -18,4 +18,9 @@ export const assests = {
   MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
   ENOURAGEMENT_STAT_TWO: "/assests/images/encouragement-stat-2.svg",
   BUDGET_PAGE: "/assests/images/budget-page.svg",
+  PRICE_TAG: "/assests/images/pricetag.svg",
+  TRUCK: "/assests/images/truck.svg",
+  CHEIF: "/assests/images/cheif.svg",
+  DISH: "/assests/images/dish.svg",
+  PERFECT_MATCH: "/assests/images/matchimage.svg",
 };
