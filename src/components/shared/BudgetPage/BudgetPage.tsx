@@ -13,16 +13,17 @@ export default function BudgetPage() {
   };
   return (
     <MainContainer>
+        <ContentWrapper>
       <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
       <ProgressBar current={5} total={5} />
       <HeaderImage loading="lazy" src={assests.BUDGET_PAGE} />
       <TextWrapper>
         <MediumHeading fontSize="medium" fontFamily="hindMedium"  color="var(--color-basic-black)"  margin="0">  What&apos;s your buget per meal? </MediumHeading>
       </TextWrapper>
-      
-      <RangeSlider />
 
-      <ActionButton setMarginTop="30px"  height="56px"  type="button"  onClick={handleNext} >   Next  </ActionButton>
+      <RangeSlider />
+      </ContentWrapper>
+      <ActionButton setMarginTop="30px"  height="56px"  type="button"  onClick={handleNext}>   Next  </ActionButton>
     </MainContainer>
   );
 }
@@ -35,6 +36,14 @@ const BrandLogo = styled.img`
   margin-bottom: 10px;
 `;
 
+const ContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  `
+
 const MainContainer = styled.div`
   background-color: #fefaf5;
   display: flex;
@@ -43,6 +52,7 @@ const MainContainer = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 480px;
   width: 100%;
   height: 100vh;
