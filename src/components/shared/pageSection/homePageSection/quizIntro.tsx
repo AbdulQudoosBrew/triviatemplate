@@ -5,7 +5,7 @@ export const QuizIntro = () => {
   return (
     <IntroWrapper>
       <HeaderLarge
-        fontSize="semiMidLarge"
+        fontSize="semiLarge"
         letterSpacing="0"
         textShadow='0px 12px 56px rgba(0, 0, 0, 0.25)'
       >
