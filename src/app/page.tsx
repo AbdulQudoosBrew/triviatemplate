@@ -6,8 +6,8 @@ import MotivationalPage from "@/components/shared/pageSection/MotivationalPage/M
 export default function Home() {
   return (
     <>
-      {/* <MainQuiz /> */}
-      <MotivationalPage />
+      <MainQuiz />
+      {/* <MotivationalPage /> */}
       {/* <TestimonialSection/> */}
       {/* <MealDeliveryQuiz /> */}
     </>
