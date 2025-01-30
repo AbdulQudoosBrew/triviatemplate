@@ -22,5 +22,16 @@ export interface LargeHeadingProps {
   fontWeight?: string;
   children: React.ReactNode;
   padding?: string;
-  border? : string;
+  border?: string;
+}
+
+export interface StepCardProps {
+  number: string;
+  title: string;
+  iconSrc?: string;
+  iconComponent?: React.ReactNode;
+}
+
+export interface MealStepsProps {
+  steps: StepCardProps[];
 }

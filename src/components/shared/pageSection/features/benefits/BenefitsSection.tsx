@@ -2,10 +2,12 @@
 import * as React from "react";
 import styled from "styled-components";
 import { BenefitCard } from "./BenefitCard";
+import { assests } from "../../../../../../public/assests";
 
 interface BenefitItem {
   title: string;
   description: string;
+  icon: string;
 }
 
 const benefitsData: BenefitItem[] = [
@@ -13,16 +15,19 @@ const benefitsData: BenefitItem[] = [
     title: "Deliciousness",
     description:
       "Our chef-created recipes are tested 200 times to ensure your meals are as delicious to eat as they are easy to make.",
+    icon: assests.DELICIOUSNESS,
   },
   {
     title: "Flexibility",
     description:
       "We accommodate every appetite, household size, and schedule. Need to skip a week or cancel? No problem.",
+    icon: assests.FLEXIBILTY,
   },
   {
     title: "Stress-free",
     description:
       "Take back your evenings with fewer trips to the store, pre-planned meals, and little cleanup.",
+    icon: assests.STRESSFREE,
   },
 ];
 
@@ -34,6 +39,7 @@ export function BenefitsSection() {
           key={index}
           title={benefit.title}
           description={benefit.description}
+          icon={benefit.icon}
         />
       ))}
     </BenefitsContainer>
@@ -45,7 +51,6 @@ const BenefitsContainer = styled.section`
   width: 100%;
   max-width: 430px;
   flex-direction: column;
-  font-family: Hind, sans-serif;
   color: rgba(0, 0, 0, 1);
   justify-content: center;
   align-items: center;

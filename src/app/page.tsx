@@ -8,8 +8,8 @@ export default function Home() {
     <>
       {/* <MainQuiz /> */}
       <MainQuiz />
-      <TestimonialSection/>
-      <MealDeliveryQuiz />
+      {/* <TestimonialSection/>
+      <MealDeliveryQuiz /> */}
     </>
   );
 }

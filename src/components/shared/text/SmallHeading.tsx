@@ -9,6 +9,7 @@ const SmallHeading = ({
   margin,
   fontWeight,
   children,
+  fontFamily,
 }: MediumHeadingProps) => {
   return (
     <Heading
@@ -17,6 +18,7 @@ const SmallHeading = ({
       color={color}
       margin={margin}
       fontWeight={fontWeight}
+      fontFamily={fontFamily}
     >
       {children}
     </Heading>
@@ -25,12 +27,25 @@ const SmallHeading = ({
 const Heading = styled.h2<{
   alignment?: string;
   fontSize?: string;
+  fontFamily?: string;
   color?: string;
   margin?: number;
   fontWeight?: string;
 }>`
-  font-size: ${({ fontSize }) => (fontSize === "medium" ? "1rem" : "0.75rem")};
-  font-family: var(--font-Hind-Light);
+  font-size: ${({ fontSize }) =>
+    fontSize === "medium"
+      ? "1rem"
+      : fontSize === "semiMedium"
+      ? "1.125"
+      : fontSize === "semiMedium"
+      ? "1.125"
+      : "0.75rem"};
+  font-family: ${({ fontFamily }) =>
+    fontFamily === "hindBold"
+      ? "var(--font-hind-bold);"
+      : fontFamily === "hindSemiBold"
+      ? "var(--font-hind-semi-bold);"
+      : "var(--font-Hind-Light);"};
   line-height: 1.375;
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => color || "#000;"};

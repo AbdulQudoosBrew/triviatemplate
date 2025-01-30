@@ -53,11 +53,15 @@ const CardContainer = styled.div`
   align-items: center;
   text-align: center;
   min-height: 300px; /* Adjust as needed */
-  padding: 15px 40px;
+  padding-top: 15px;
+  padding-bottom: 45px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 15px;
   background-color: rgba(247, 209, 197, 1);
   color: rgba(0, 0, 0, 1);
-  min-width: 390px;
+  min-width: 340px;
+  max-width: 340px;
 
   @media (max-width: 640px) {
     min-height: 280px; /* Adjust for mobile */
@@ -68,7 +72,8 @@ const CardHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  /* padding-bottom: 5px; */
 `;
 
 const CircularImage = styled.img`
@@ -85,6 +90,7 @@ const RatingMain = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-bottom: 10px;
 `;
 
 const RatingStars = styled.div`
@@ -114,7 +120,7 @@ const Divider = styled.div`
   align-self: stretch;
   width: 100%;
   height: 1px;
-  margin: 10px 0;
+  margin: 15px 0;
   border: none;
   border-top: 2px dashed rgba(219, 53, 18, 1);
   border-image: repeating-linear-gradient(
