@@ -20,7 +20,7 @@ export const MainQuiz: React.FC = () => {
         height={27}
         loading="lazy"
       />
-      <HeroSection />
+        <HeroSection />
       <QuizIntro />
       <ActionButton
         setMarginTop="20px"
@@ -42,14 +42,14 @@ const QuizContainer = styled.section`
   padding: 30px;
   margin: 0 auto;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   color: rgba(0, 0, 0, 1);
   text-align: center;
-  /* justify-content: center; */
   flex-direction: column;
   max-width: 480px;
   width: 100%;
   height: 100vh;
+  padding-top: 10px;
 `;
 
 const LogoImage = styled.img`

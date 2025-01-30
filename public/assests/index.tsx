@@ -1,7 +1,7 @@
 export const assests = {
   SOYUMMY_MAIN_LOGO: "/assests/images/soyummy-image.svg",
   MAIN_BACKGROUNG_IMAHE: "/assests/images/main-Background.svg",
-  MAIN_BACKGROUNG_IMAHE_TWO: "/assests/images/background-2.svg",
+  MAIN_BACKGROUNG_IMAHE_TWO: "/assests/images/background-3.svg",
   TIMER_ICON: "/assests/images/timer-icon.svg",
   STAR: "/assests/images/star.svg",
   LETS_START_WITH_EMOJI: "/assests/images/lets-start-with-emoji.svg",
@@ -15,4 +15,5 @@ export const assests = {
   STRESSFREE: "/assests/images/stressfree.svg",
   FLEXIBILTY: "/assests/images/flexability.svg",
   DELICIOUSNESS: "/assests/images/Deliciousness.svg",
+  MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
 };

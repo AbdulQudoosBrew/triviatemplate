@@ -1,15 +1,23 @@
 import styled from "styled-components";
 import { OptionCardProps } from "@/types/FormTypes";
+import SmallParagraph from "../text/SmallParagraph";
 
 export const OptionCard = ({ icon, text }: OptionCardProps) => {
-    return (
-        <CardWrapper>
-            <CardContainer>
-                <CardIcon loading="lazy" src={icon} alt="" />
-                <CardText>{text}</CardText>
-            </CardContainer>
-        </CardWrapper>
-    );
+  return (
+    <CardWrapper>
+      <CardContainer>
+        <CardIcon loading="lazy" src={icon} alt="" />
+        <SmallParagraph
+          fontSize="large"
+          fontFamily="hindRegular"
+          color="#615F5F"
+          lineHeight="27.6px"
+        >
+          {text}
+        </SmallParagraph>
+      </CardContainer>
+    </CardWrapper>
+  );
 };
 
 const CardWrapper = styled.div`
@@ -42,11 +50,4 @@ const CardIcon = styled.img`
   object-fit: contain;
   object-position: center;
   width: 32px;
-`;
-
-const CardText = styled.div`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  color: rgba(97, 95, 95, 1);
-  font: 400 18px/2 Hind, sans-serif;
-  letter-spacing: -0.12px;
 `;
