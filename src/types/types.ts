@@ -1,3 +1,6 @@
+export interface MainQuizProps {
+  handleStartQuiz: () => void;
+}
 export interface TestimonialProps {
   rating: number;
   author: string;

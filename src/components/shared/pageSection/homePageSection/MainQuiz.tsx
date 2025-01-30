@@ -5,12 +5,10 @@ import { HeroSection } from "./HeroSection";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import { assests } from "../../../../../public/assests/index";
 import { QuizIntro } from "./quizIntro";
+import useQuiz from "@/customHooks/useQuiz";
+import { MainQuizProps } from "@/types/types";
 
-export const MainQuiz: React.FC = () => {
-  const handleStartQuiz = () => {
-    // Quiz start logic here
-  };
-
+export const MainQuiz: React.FC<MainQuizProps> = ({ handleStartQuiz }) => {
   return (
     <QuizContainer>
       <LogoImage
@@ -20,7 +18,7 @@ export const MainQuiz: React.FC = () => {
         height={27}
         loading="lazy"
       />
-        <HeroSection />
+      <HeroSection />
       <QuizIntro />
       <ActionButton
         setMarginTop="30px"
