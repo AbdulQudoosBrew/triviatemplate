@@ -18,10 +18,8 @@ export const QuizIntro = () => {
 const IntroWrapper = styled.section`
   display: flex;
   width: 100%;
-  max-width: 327px;
   flex-direction: column;
   text-align: center;
-  margin-top: 24px;
 `;
 
 const IntroHeading = styled.h2`

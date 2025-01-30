@@ -8,9 +8,11 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   completionTime,
   timerIcon,
   height,
+  maxWidth,
+  setMarginTop,
 }) => {
   return (
-    <ButtonWrapper>
+    <ButtonWrapper maxWidth={maxWidth} setMarginTop={setMarginTop}>
       <StartButton
         type={type as "button" | "submit" | "reset" | undefined}
         onClick={onClick}
@@ -28,21 +30,21 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   );
 };
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.div<{ maxWidth?: string; setMarginTop?: string }>`
   display: flex;
   width: 100%;
-  max-width: 327px;
+  max-width: ${({ maxWidth }) => maxWidth || ""};
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
+  margin-top: ${({ setMarginTop }) => setMarginTop || ""};
 `;
 
-const StartButton = styled.button<{ height?: string }>`
+const StartButton = styled.button<{ height?: string; }>`
   display: flex;
-  height: ${(props) => props.height};
+  height: ${props => props.height};
+  width: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
   border-radius: 30px;
   background-color: #db3512;
   color: #fefaf5;

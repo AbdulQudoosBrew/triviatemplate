@@ -29,8 +29,7 @@ const Heading = styled.h2<{
   margin?: number;
   fontWeight?: string;
 }>`
-  font-size: ${({ fontSize }) =>
-    fontSize === "large" ? "1.875rem" : "1.375rem"};
+  font-size: ${({ fontSize }) => (fontSize === "large" ? "1.875rem" : "1.375rem")};
   font-family: var(--font-palmerlakeprint-regular);
   letter-spacing: -0.12px;
   line-height: 1.875rem;

@@ -18,10 +18,12 @@ export const MainQuiz: React.FC = () => {
         alt="main-logo"
         width={115}
         height={27}
+        loading="lazy"
       />
       <HeroSection />
       <QuizIntro />
       <ActionButton
+        setMarginTop="20px"
         height="56px"
         type="button"
         onClick={handleStartQuiz}
@@ -34,19 +36,22 @@ export const MainQuiz: React.FC = () => {
   );
 };
 
-const QuizContainer = styled.main`
+const QuizContainer = styled.section`
   background-color: #fefaf5;
   display: flex;
+  padding: 30px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  /* justify-content: center; */
+  flex-direction: column;
   max-width: 480px;
   width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  align-items: center;
-  margin: 0 auto;
-  padding: 20px;
+  height: 100vh;
 `;
 
 const LogoImage = styled.img`
-  margin: 10px auto;
   object-fit: contain;
 `;
