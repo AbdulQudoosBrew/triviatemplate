@@ -16,4 +16,8 @@ export const assests = {
   FLEXIBILTY: "/assests/images/flexability.svg",
   DELICIOUSNESS: "/assests/images/Deliciousness.svg",
   MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
+  RESAULTPENDING: "/assests/images/resault-pending.svg",
+  RESAULTPENDING_ONE: "/assests/images/resault-pending-1.svg",
+  RESAULTPENDING_TWO: "/assests/images/resault-pending-2.svg",
+  RESAULTPENDING_THREE: "/assests/images/resault-pending-3.svg",
 };

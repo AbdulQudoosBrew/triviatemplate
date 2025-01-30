@@ -2,14 +2,16 @@ import { MainQuiz } from "@/components/shared/pageSection/homePageSection/MainQu
 import { MealDeliveryQuiz } from "@/components/shared/QuestionCard/QuestionMainQuiz";
 import { TestimonialSection } from "@/components/shared/testimonials/TestimonialSection";
 import MotivationalPage from "@/components/shared/pageSection/MotivationalPage/MotivationalPage";
+import ResaultPendingPage from "@/components/shared/pageSection/ResaultPendingPage/ResaultPendingPage";
 
 export default function Home() {
   return (
     <>
-      <MainQuiz />
+      {/* <MainQuiz /> */}
       {/* <MotivationalPage /> */}
       {/* <MealDeliveryQuiz /> */}
       {/* <TestimonialSection/> */}
+      <ResaultPendingPage />
     </>
   );
 }
