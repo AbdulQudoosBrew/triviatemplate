@@ -19,7 +19,8 @@ const HeroWrapper = styled.section`
   border-radius: 15px;
   aspect-ratio: 0.901;
   width: 100%;
-  max-width: 319px;
+  max-height: 354px;
+  height: 100%;
 `;
 
 const HeroImage = styled.img`
@@ -41,4 +42,5 @@ const HeroTitle = styled.h1`
   padding: 45px 13px 182px;
   margin: 7px 7px 0 0;
   line-height: 34px;
+  text-align: left;
 `;

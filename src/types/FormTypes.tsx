@@ -5,6 +5,8 @@ export interface NextQuestionButtonProps {
   completionTime?: string;
   timerIcon?: string;
   height?: string;
+  maxWidth?: string;
+  setMarginTop?: string;
 }
 
 export interface HeroSectionProps {
@@ -15,4 +17,15 @@ export interface HeroSectionProps {
 export interface QuizIntroProps {
   heading: string;
   description: string;
+}
+
+export interface OptionCardProps {
+  icon: string;
+  text: string;
+  isFirst?: boolean;
+}
+
+export interface ProgressBarProps {
+  current: number;
+  total: number;
 }
