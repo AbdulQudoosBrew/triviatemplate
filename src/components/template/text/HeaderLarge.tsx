@@ -49,7 +49,7 @@ const Heading = styled.h1<{
       : fontSize === "medium"
       ? "2.125rem"
       : fontSize === "semiLarge"
-      ? "3rem"
+      ? "2.75rem"
       : ""};
   font-family: ${({ fontFamily }) =>
     fontFamily === "hindReguler"

@@ -16,4 +16,9 @@ export const assests = {
   FLEXIBILTY: "/assests/images/flexability.svg",
   DELICIOUSNESS: "/assests/images/Deliciousness.svg",
   MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
+  PRICE_TAG: "/assests/images/pricetag.svg",
+  TRUCK: "/assests/images/truck.svg",
+  CHEIF: "/assests/images/cheif.svg",
+  DISH: "/assests/images/dish.svg",
+  PERFECT_MATCH: "/assests/images/matchimage.svg",
 };
