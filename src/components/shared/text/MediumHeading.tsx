@@ -38,8 +38,6 @@ const Heading = styled.h2<{
   textAlign?: string;
   lineHeight?: string;
 }>`
-  font-size: ${({ fontSize }) =>
-    fontSize === "large" ? "1.875rem" : "1.375rem"};
   font-family: var(--font-palmerlakeprint-regular);
   font-size: ${({ fontSize }) =>
     fontSize === "large"

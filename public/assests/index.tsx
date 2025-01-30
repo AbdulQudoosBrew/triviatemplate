@@ -16,4 +16,6 @@ export const assests = {
   FLEXIBILTY: "/assests/images/flexability.svg",
   DELICIOUSNESS: "/assests/images/Deliciousness.svg",
   MOTIVATIONAL_IMAGE_ONE: "/assests/images/motivational-1.svg",
+  ENOURAGEMENT_STAT_TWO: "/assests/images/encouragement-stat-2.svg",
+  BUDGET_PAGE: "/assests/images/budget-page.svg",
 };
