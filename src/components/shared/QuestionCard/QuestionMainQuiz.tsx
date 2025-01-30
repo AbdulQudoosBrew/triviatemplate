@@ -41,7 +41,7 @@ export const MealDeliveryQuiz = () => {
                     textAlign="left"
                     color="var(--color-basic-black)"
                 >
-                    What&apos;s your primary goal for trying a meal delivery service?
+                    What&apos;s your ultimate goal for winning at mealtime?
                 </MediumHeading>
                 <OptionsContainer>
                     {options.map((option, index) => (
@@ -55,7 +55,7 @@ export const MealDeliveryQuiz = () => {
                 </OptionsContainer>
             </ContentSection>
             <ActionButton
-                setMarginTop="30px"
+                setMarginTop="25px"
                 height="56px"
                 type="button"
                 onClick={handleStartQuiz}
@@ -101,10 +101,11 @@ const HeaderImage = styled.img`
 const ContentSection = styled.div`
   align-self: stretch;
   display: flex;
-  margin-top: 9px;
+  margin-top: 0.813rem;
   width: 100%;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 `;
 
 const OptionsContainer = styled.div`

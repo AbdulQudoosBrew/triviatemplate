@@ -23,7 +23,7 @@ export const MainQuiz: React.FC = () => {
         <HeroSection />
       <QuizIntro />
       <ActionButton
-        setMarginTop="20px"
+        setMarginTop="30px"
         height="56px"
         type="button"
         onClick={handleStartQuiz}
@@ -42,7 +42,7 @@ const QuizContainer = styled.section`
   padding: 30px;
   margin: 0 auto;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   color: rgba(0, 0, 0, 1);
   text-align: center;
   flex-direction: column;

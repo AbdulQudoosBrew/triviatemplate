@@ -14,6 +14,7 @@ export interface MediumHeadingProps {
   children: React.ReactNode;
   lineHeight?: string;
   textAlign?: string;
+  Opacity?: string;
 }
 
 export interface LargeHeadingProps {
@@ -27,6 +28,8 @@ export interface LargeHeadingProps {
   border?: string;
   fontFamily?: string;
   lineHeight?: string;
+  letterSpacing?: string;
+  textShadow?: string;
 }
 
 export interface StepCardProps {

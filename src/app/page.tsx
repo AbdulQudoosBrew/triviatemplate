@@ -8,13 +8,8 @@ export default function Home() {
     <>
       <MainQuiz />
       {/* <MotivationalPage /> */}
-      {/* <MainQuiz /> */}
-      {/* <MainQuiz /> */}
-      {/* <TestimonialSection/>
-      <MealDeliveryQuiz /> */}
-      <MotivationalPage />
-      {/* <TestimonialSection/> */}
       {/* <MealDeliveryQuiz /> */}
+      {/* <TestimonialSection/> */}
     </>
   );
 }

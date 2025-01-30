@@ -1,9 +1,16 @@
+import HeaderLarge from "@/components/template/text/HeaderLarge";
 import styled from "styled-components";
 
 export const QuizIntro = () => {
   return (
     <IntroWrapper>
-      <IntroHeading>Find Your Perfect Meal Solution in 2 Minutes!</IntroHeading>
+      <HeaderLarge
+        fontSize="semiMidLarge"
+        letterSpacing="0"
+        textShadow='0px 12px 56px rgba(0, 0, 0, 0.25)'
+      >
+        Find Your Perfect Meal Solution in 2 Minutes!
+      </HeaderLarge>
       <IntroDescription>
         Take our{" "}
         <StrongText> quick quiz </StrongText> to discover which
@@ -22,19 +29,8 @@ const IntroWrapper = styled.section`
   text-align: center;
 `;
 
-const IntroHeading = styled.h2`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  font-family: var(--font-palmerlakeprint-regular);
-  font-size: 2.75rem;
-  line-height: 30px;
-  font-weight: 500;
-  color: var(--color-basic-black);
-  letter-spacing: 2px;
-  font-weight: bold;
-`;
-
 const IntroDescription = styled.p`
-  margin-top: 13px;
+  margin-top: 1rem;
   font-family: var(--font-hind-regular);
   font-size: 1.125rem;
   color: var(--color-basic-black);
