@@ -47,13 +47,13 @@ export const Divider = styled.hr`
 `;
 
 export const InfoCard = styled.div`
-  border-radius: 15px;
+  border-radius: 0.938rem;
   background-color: #F7D1C5;
   display: flex;
   flex-direction: column;
   letter-spacing: -0.12px;
   line-height: 28px;
-  padding: 24px 23px;
+  padding: 0.938rem 1.438rem 1.438rem;
 `;
 
 export const ContentImage = styled.img`
