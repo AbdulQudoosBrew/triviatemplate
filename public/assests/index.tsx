@@ -5,6 +5,7 @@ export const assests = {
   TIMER_ICON: "/assests/images/timer-icon.svg",
   STAR: "/assests/images/star.svg",
   LETS_START_WITH_EMOJI: "/assests/images/lets-start-with-emoji.svg",
+  PERSON: "/assests/images/person.png",
   SOYUMMY_MAIN_LOGO_SMALL: "/assests/images/SYlogo-small.svg",
   ARROW_LEFT: "/assests/images/arrow-left.svg",
   OPTION_ONE: "/assests/images/option-1.svg",
