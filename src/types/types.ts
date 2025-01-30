@@ -8,18 +8,22 @@ export interface MediumHeadingProps {
   fontSize?: string;
   fontFamily?: string;
   color?: string;
-  margin?: number;
+  margin?: string;
   fontWeight?: string;
   children: React.ReactNode;
+  lineHeight?: string;
+  textAlign?: string;
 }
 
 export interface LargeHeadingProps {
   alignment?: string;
   fontSize?: string;
   color?: string;
-  margin?: number;
+  margin?: string;
   fontWeight?: string;
   children: React.ReactNode;
   padding?: string;
   border? : string;
+  fontFamily?: string;
+  lineHeight?: string;
 }

@@ -10,6 +10,7 @@ const SmallParagraph = ({
   margin,
   fontWeight,
   children,
+  lineHeight,
 }: MediumHeadingProps) => {
   return (
     <Paragraph
@@ -19,6 +20,7 @@ const SmallParagraph = ({
       margin={margin}
       fontWeight={fontWeight}
       fontFamily={fontFamily}
+      lineHeight={lineHeight}
     >
       {children}
     </Paragraph>
@@ -29,24 +31,26 @@ const Paragraph = styled.p<{
   alignment?: string;
   fontSize?: string;
   color?: string;
-  margin?: number;
+  margin?: string;
   fontWeight?: string;
   fontFamily?: string;
+  lineHeight?: string;
 }>`
   font-size: ${({ fontSize }) =>
-    fontSize === "large" ? "1.125rem" : fontSize === "medium" ? "1rem" : ""};
+    fontSize === "large" ? "1.125rem" : fontSize === "medium" ? "1rem" : fontSize === "small" ? "0.7rem" : ""};
   font-family: ${({ fontFamily }) =>
     fontFamily === "hindRegular"
       ? "var(--font-Hind-regular)"
       : fontFamily === "hindLight"
-      ? "var(--font-Hind-Light)"
-      : ""};
+        ? "var(--font-Hind-Light)"
+        : ""};
   letter-spacing: -0.12px;
-  line-height: 1.563rem;
+  line-height: ${({ lineHeight }) => lineHeight ? lineHeight : "1.375rem"};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
-  color: ${({ color }) => color || "#000;"};
+  color: ${({ color }) => color || "#000"};
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
   align-self: ${({ alignment }) => alignment || "auto"};
+  margin: ${({ margin }) => margin ? margin : "auto"};
 `;
 
 export default SmallParagraph;

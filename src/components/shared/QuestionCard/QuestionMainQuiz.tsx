@@ -4,6 +4,7 @@ import { ProgressBar } from "./ProgressBar";
 import { OptionCard } from "./OptionCard";
 import { assests } from "../../../../public/assests";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
+import MediumHeading from "../text/MediumHeading";
 
 const options = [
     {
@@ -33,14 +34,15 @@ export const MealDeliveryQuiz = () => {
             <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
             <ProgressBar current={1} total={5} />
             <HeaderImage loading="lazy" src={assests.MAIN_BACKGROUNG_IMAHE_TWO} />
-
             <ContentSection>
-                <QuestionContainer>
-                    <QuestionText>
-                        What&apos;s your primary goal for trying a meal delivery service?
-                    </QuestionText>
-                </QuestionContainer>
-
+                <MediumHeading
+                    fontSize="medium"
+                    fontFamily="hindMedium"
+                    textAlign="left"
+                    color="var(--color-basic-black)"
+                >
+                    What&apos;s your primary goal for trying a meal delivery service?
+                </MediumHeading>
                 <OptionsContainer>
                     {options.map((option, index) => (
                         <OptionCard
@@ -53,7 +55,7 @@ export const MealDeliveryQuiz = () => {
                 </OptionsContainer>
             </ContentSection>
             <ActionButton
-                setMarginTop="20px"
+                setMarginTop="30px"
                 height="56px"
                 type="button"
                 onClick={handleStartQuiz}
@@ -71,10 +73,7 @@ const QuizContainer = styled.div`
   padding: 30px;
   margin: 0 auto;
   align-items: center;
-  gap: 20px;
-  color: rgba(0, 0, 0, 1);
   text-align: center;
-  justify-content: center;
   flex-direction: column;
   max-width: 480px;
   width: 100%;
@@ -87,6 +86,7 @@ const BrandLogo = styled.img`
   object-position: center;
   width: 35px;
   height: 22px;
+  margin-bottom: 10px;
 `;
 
 const HeaderImage = styled.img`
@@ -105,21 +105,6 @@ const ContentSection = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: center;
-`;
-
-const QuestionContainer = styled.div`
-  align-self: stretch;
-  display: flex;
-  min-height: 74px;
-  width: 100%;
-  flex-direction: column;
-`;
-
-const QuestionText = styled.h1`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 1);
-  font: 500 22px/28px Hind, sans-serif;
-  text-align: left;
 `;
 
 const OptionsContainer = styled.div`

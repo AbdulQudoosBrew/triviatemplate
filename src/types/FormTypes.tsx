@@ -29,3 +29,9 @@ export interface ProgressBarProps {
   current: number;
   total: number;
 }
+
+export interface TextBlockProps {
+  text: string;
+  boldText?: string;
+}
+
