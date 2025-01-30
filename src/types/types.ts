@@ -25,6 +25,8 @@ export interface LargeHeadingProps {
   children: React.ReactNode;
   padding?: string;
   border?: string;
+  fontFamily?: string;
+  lineHeight?: string;
 }
 
 export interface StepCardProps {

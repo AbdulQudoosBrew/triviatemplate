@@ -29,7 +29,7 @@ const Heading = styled.h2<{
   fontSize?: string;
   fontFamily?: string;
   color?: string;
-  margin?: number;
+  margin?: string;
   fontWeight?: string;
 }>`
   font-size: ${({ fontSize }) =>

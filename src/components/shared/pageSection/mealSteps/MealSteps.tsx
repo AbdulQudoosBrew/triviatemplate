@@ -3,9 +3,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { StepCard } from "./StepCard";
 import { MealStepsProps } from "@/types/types";
-import HeaderLarge from "@/components/template/text/HeaderLarge";
 import Divider from "@/components/template/Divider";
-
+import HeaderLarge from '@/components/template/text/HeaderLarge';
 export const MealSteps: React.FC = () => {
   const steps = [
     {
