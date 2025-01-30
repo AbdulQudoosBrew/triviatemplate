@@ -4,4 +4,5 @@ export const assests = {
   TIMER_ICON: "/assests/images/timer-icon.svg",
   STAR: "/assests/images/star.svg",
   LETS_START_WITH_EMOJI: "/assests/images/lets-start-with-emoji.svg",
+  PERSON: "/assests/images/person.png",
 };

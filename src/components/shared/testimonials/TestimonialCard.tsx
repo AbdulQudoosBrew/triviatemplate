@@ -10,9 +10,17 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
   rating,
   author,
   content,
+  authorImage,
 }) => {
   return (
     <CardContainer>
+      <CardHeader>
+        <CircularImage loading="lazy" src={authorImage} alt={"authorImage"} />
+        <MediumHeading fontSize="large" alignment="center">
+          {author}
+        </MediumHeading>
+      </CardHeader>
+      <Divider />
       <RatingMain>
         <RatingStars>
           {Array.from({ length: rating }, (_, index) => (
@@ -26,15 +34,8 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({
             />
           ))}
         </RatingStars>
-        <MediumHeading
-          fontSize="large"
-          alignment="center"
-        >{`${rating} / 5`}</MediumHeading>
       </RatingMain>
-      <Divider />
-      <MediumHeading fontSize="large" alignment="center">
-        {author}
-      </MediumHeading>
+
       <SmallParagraph
         fontFamily="hindRegular"
         alignment="center"
@@ -52,7 +53,7 @@ const CardContainer = styled.div`
   align-items: center;
   text-align: center;
   min-height: 300px; /* Adjust as needed */
-  padding: 55px;
+  padding: 15px 40px;
   border-radius: 15px;
   background-color: rgba(247, 209, 197, 1);
   color: rgba(0, 0, 0, 1);
@@ -61,6 +62,22 @@ const CardContainer = styled.div`
   @media (max-width: 640px) {
     min-height: 280px; /* Adjust for mobile */
   }
+`;
+
+const CardHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+const CircularImage = styled.img`
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 52px;
 `;
 
 const RatingMain = styled.div`

@@ -1,6 +1,7 @@
 export interface TestimonialProps {
   rating: number;
   author: string;
+  authorImage?: string;
   content: string;
 }
 export interface MediumHeadingProps {
