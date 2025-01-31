@@ -22,7 +22,11 @@ const HeroWrapper = styled.section`
   position: relative;
   border-radius: 15px;
   width: 100%;
-  margin: 12px 0px
+  flex: 1; /* Allows flexible height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 354px; /* Ensures it doesn't shrink */
 `;
 
 const HeroTitleDiv = styled.div`
@@ -41,9 +45,10 @@ position: relative;
 const MainImageDiv = styled.div`
   position: relative;
   width: 100%;
-  height: 354px;
+  /* height: 354px; */
   border-radius: 15px;
   padding: 10px;
+  height: 100%;
 `;
 
 const HeroImage = styled.img`
@@ -56,15 +61,7 @@ const HeroImage = styled.img`
 `;
 
 const HeroTitle = styled.h1`
-  /* position: relative; */
   color: var(--color-basic-white);
   font-family: var(--font-hind-bold);
   font-size: 2.5rem;
-  /* overflow: hidden;
-  border: 5px solid var(--color-basic-white);
-  border-radius: 15px;
-  border-left: none;
-  padding: 7px 7px 0 0;
-  line-height: 34px;
-  text-align: left; */
 `;
