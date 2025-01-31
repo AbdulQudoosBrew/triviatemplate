@@ -50,5 +50,5 @@ export interface MealStepsProps {
   lineheight?: string;
 }
 export interface MotivationalPageProps {
-  onContinue: () => void;
+  onContinue?: () => void;
 }
