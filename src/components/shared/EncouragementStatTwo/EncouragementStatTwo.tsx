@@ -5,21 +5,24 @@ import { assests } from "../../../../public/assests";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
 
-export default function EncouragementStatTwo() {
-  const handleWowButton = () => {
-    // Quiz start logic here
-  };
+export default function EncouragementStatTwo({ onContinue }: any) {
   return (
     <>
       <MainContainer>
         <ContentWrapper>
-        <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
-        <HeaderLarge fontSize="medium">  SAVE MORE TIME,  <br /> ENJOY MORE MEAL!  </HeaderLarge>
-        <Divider />
+          <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
+          <HeaderLarge fontSize="medium">
+            {" "}
+            SAVE MORE TIME, <br /> ENJOY MORE MEAL!{" "}
+          </HeaderLarge>
+          <Divider />
 
-        <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
+          <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
         </ContentWrapper>
-        <ActionButton   height="56px"  type="button" onClick={handleWowButton}  >   WOW!  </ActionButton>
+        <ActionButton height="56px" type="button" onClick={onContinue}>
+          {" "}
+          WOW!{" "}
+        </ActionButton>
       </MainContainer>
     </>
   );
@@ -31,7 +34,7 @@ const ContentWrapper = styled.div`
   text-align: center;
   flex-direction: column;
   gap: 25px;
-  `
+`;
 const MainContainer = styled.section`
   background-color: #fefaf5;
   display: flex;

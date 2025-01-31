@@ -13,14 +13,11 @@ export default function Home() {
   console.log("🚀 ~ Home ~ isQuizStart:", isQuizStart);
   return (
     <>
-      {/* <MainQuiz /> */}
       {!isQuizStart ? (
         <MainQuiz handleStartQuiz={handleStartQuiz} />
       ) : (
         <MealDeliveryQuiz quiz={quiz} />
       )}
-       {/* <MotivationalPage /> */}
-      {/* <ResaultPendingPage /> */}
     </>
   );
 }

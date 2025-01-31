@@ -1,26 +1,22 @@
 "use client";
-import { IconImage, PendingResultImage } from "../MotivationalPage/MotivationalStyle";
+import {
+  IconImage,
+  PendingResultImage,
+} from "../MotivationalPage/MotivationalStyle";
 import { assests } from "../../../../../public/assests";
 import { ProgressStatusBar } from "./ProgressStatusBar";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const ResaultPendingPage = () => {
-  const [percentage, setPercentage] = useState(0); // Start with 0%
+const ResaultPendingPage = ({
+  showPercentageResultPending,
+  percentage,
+}: any) => {
+  console.log("🚀 ~ percentage:", percentage);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setPercentage((prev) => {
-        if (prev < 88) {
-          return prev + 1;
-        } else {
-          clearInterval(interval);
-          return 88;
-        }
-      });
-    }, 30);
-
+    const interval = showPercentageResultPending();
     return () => clearInterval(interval);
   }, []);
 
@@ -36,7 +32,7 @@ const ResaultPendingPage = () => {
       <HeaderLarge
         fontSize="medium"
         letterSpacing="0"
-        textshadow='0px 12px 56px rgba(0, 0, 0, 0.25)'
+        textshadow="0px 12px 56px rgba(0, 0, 0, 0.25)"
         margin="15px 0px"
       >
         YOUR PERFECT MATCH IS...
@@ -47,7 +43,7 @@ const ResaultPendingPage = () => {
 };
 
 const ResaultContainer = styled.div`
-position: relative;
+  position: relative;
   background-color: #fefaf5;
   display: flex;
   padding: 10px 30px;

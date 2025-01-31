@@ -7,23 +7,36 @@ import MediumHeading from "../text/MediumHeading";
 import RangeSlider from "@/components/template/form/input/RangeSlider";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 
-export default function BudgetPage() {
-  const handleNext = () => {
-    // Quiz start logic here
-  };
+export default function BudgetPage({ onContinue }: any) {
   return (
     <MainContainer>
-        <ContentWrapper>
-      <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
-      <ProgressBar current={5} total={5} />
-      <HeaderImage loading="lazy" src={assests.BUDGET_PAGE} />
-      <TextWrapper>
-        <MediumHeading fontSize="medium" fontFamily="hindMedium"  color="var(--color-basic-black)"  margin="0">  What&apos;s your buget per meal? </MediumHeading>
-      </TextWrapper>
+      <ContentWrapper>
+        <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
+        <ProgressBar current={5} total={5} />
+        <HeaderImage loading="lazy" src={assests.BUDGET_PAGE} />
+        <TextWrapper>
+          <MediumHeading
+            fontSize="medium"
+            fontFamily="hindMedium"
+            color="var(--color-basic-black)"
+            margin="0"
+          >
+            {" "}
+            What&apos;s your buget per meal?{" "}
+          </MediumHeading>
+        </TextWrapper>
 
-      <RangeSlider />
+        <RangeSlider />
       </ContentWrapper>
-      <ActionButton setmargintop="30px"  height="56px"  type="button"  onClick={handleNext}>   Next  </ActionButton>
+      <ActionButton
+        setmargintop="30px"
+        height="56px"
+        type="button"
+        onClick={onContinue}
+      >
+        {" "}
+        Next{" "}
+      </ActionButton>
     </MainContainer>
   );
 }
@@ -42,7 +55,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
-  `
+`;
 
 const MainContainer = styled.div`
   background-color: #fefaf5;
