@@ -6,6 +6,7 @@ import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import { assests } from "../../../../../public/assests/index";
 import { QuizIntro } from "./quizIntro";
 import { MainQuizProps } from "@/types/types";
+import Image from "next/image";
 
 export const MainQuiz: React.FC<MainQuizProps> = ({ handleStartQuiz }) => {
   return (
@@ -47,7 +48,7 @@ const QuizContainer = styled.div`
   justify-content: space-around;
 `;
 
-const LogoImage = styled.img`
+const LogoImage = styled(Image)`
   object-fit: contain;
   margin: 10px 0px;
 `;

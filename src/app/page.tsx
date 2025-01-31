@@ -10,8 +10,7 @@ export default function Home() {
       {!isQuizStart ? (
         <MainQuiz handleStartQuiz={handleStartQuiz} />
       ) : (
-        // @ts-expect-error: This error is expected due to [explain the reason here]
-        <MealDeliveryQuiz quiz={quiz} />
+        <MealDeliveryQuiz quizQuestionLength={quiz.quizData.length} />
       )}
       {/* <MotivationalPage /> */}
       {/* <ResaultPendingPage /> */}

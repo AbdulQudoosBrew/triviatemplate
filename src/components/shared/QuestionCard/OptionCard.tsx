@@ -1,11 +1,9 @@
-
 import styled from "styled-components";
 import SmallParagraph from "../text/SmallParagraph";
 import React from "react";
 import { OptionCardProps } from "@/types/types";
 
-
-export const OptionCard : React.FC<OptionCardProps> = ({
+export const OptionCard: React.FC<OptionCardProps> = ({
   icon,
   text,
   handleOptionClick,
@@ -13,10 +11,7 @@ export const OptionCard : React.FC<OptionCardProps> = ({
 }) => {
   return (
     <CardWrapper>
-      <CardContainer
-        onClick={handleOptionClick}
-        isselected={isselected ? true : undefined}
-      >
+      <CardContainer onClick={handleOptionClick} isselected={isselected}>
         <CardIcon loading="lazy" src={icon} alt="" />
         <SmallParagraph
           textalign="left"
@@ -58,8 +53,10 @@ const CardWrapper = styled.div`
 //     transform: translateY(-2px);
 //   }
 // `;
-const CardContainer = styled.div<{ isselected?: boolean }>`
-  // Add ?
+// Prevent `isselected` from being forwarded to the DOM
+const CardContainer = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== "isselected",
+})<{ isselected?: boolean }>`
   border-radius: 10px;
   background-color: ${({ isselected }) => (isselected ? "#eca393" : "white")};
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);

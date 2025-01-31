@@ -17,7 +17,10 @@ interface Option {
   icon: string;
 }
 
-export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({ quiz }) => {
+export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({
+  quizQuestionLength,
+}) => {
+  console.log("🚀 ~ quiz:", quizQuestionLength);
   const {
     currentQuestionIndex,
     currentQuestion,
@@ -49,8 +52,7 @@ export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({ quiz }) => {
       <BudgetPage
         handlePreviousQuestion={handlePreviousQuestion}
         current={5}
-        // @ts-expect-error: This error is expected due to [explain the reason here]
-        total={quiz.quizData.length}
+        total={quizQuestionLength}
         onContinue={handleNextQuestion}
       />
     );
@@ -77,8 +79,7 @@ export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({ quiz }) => {
       <ProgressBar
         handlePreviousQuestion={handlePreviousQuestion}
         current={currentQuestionIndex + 1}
-        // @ts-expect-error: This error is expected due to [explain the reason here]
-        total={quiz.quizData.length}
+        total={quizQuestionLength}
       />
       <ImageSection>
         <HeaderImage loading="lazy" src={currentQuestion.questionIcon} />
@@ -112,11 +113,7 @@ export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({ quiz }) => {
         timerIcon="/icons/timer.png"
         disabled={!selectedOption} // Disable until an option is selected
       >
-        {currentQuestionIndex <
-        // @ts-expect-error: This error is expected due to [explain the reason here]
-        quiz.quizData.length - 1
-          ? "Next"
-          : "Finish"}
+        {currentQuestionIndex < quizQuestionLength - 1 ? "Next" : "Finish"}
       </ActionButton>
     </QuizContainer>
   );

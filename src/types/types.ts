@@ -61,15 +61,7 @@ export interface OptionCardProps {
   handleOptionClick: () => void;
 }
 export interface MealDeliveryQuizProps {
-  quiz: {
-    quizName: string;
-    quizData: {
-      question: string;
-      questionIcon: string;
-      options: { text: string; icon: string }[];
-      correctAnswer: string;
-    };
-  }[];
+  quizQuestionLength: number;
 }
 
 export interface MealStepsProps {
