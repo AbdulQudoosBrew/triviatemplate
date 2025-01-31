@@ -5,8 +5,11 @@ import { assests } from "../../../../public/assests";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
 import Divider from "@/components/template/Divider";
+import { EncouragementStatTwoProps } from "@/types/types";
 
-export default function EncouragementStatTwo({ onContinue }: any) {
+const EncouragementStatTwo: React.FC<EncouragementStatTwoProps> = ({
+  onContinue,
+}) => {
   return (
     <>
       <MainContainer>
@@ -27,7 +30,7 @@ export default function EncouragementStatTwo({ onContinue }: any) {
       </MainContainer>
     </>
   );
-}
+};
 const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -69,3 +72,5 @@ const HeaderImage = styled.img`
   border-radius: 0;
   min-height: 451px;
 `;
+
+export default EncouragementStatTwo;

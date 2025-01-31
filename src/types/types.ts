@@ -41,6 +41,36 @@ export interface StepCardProps {
   iconSrc?: string;
   iconComponent?: React.ReactNode;
 }
+export interface BudgetPageProps {
+  onContinue: () => void;
+  handlePreviousQuestion: () => void;
+  current: number;
+  total?: number;
+}
+export interface EncouragementStatTwoProps {
+  onContinue: () => void;
+}
+export interface ResaultPendingPageProps {
+  showPercentageResultPending: () => void;
+  percentage: number;
+}
+export interface OptionCardProps {
+  icon: string;
+  text: string;
+  isselected: boolean;
+  handleOptionClick: () => void;
+}
+export interface MealDeliveryQuizProps {
+  quiz: {
+    quizName: string;
+    quizData: {
+      question: string;
+      questionIcon: string;
+      options: { text: string; icon: string }[];
+      correctAnswer: string;
+    };
+  }[];
+}
 
 export interface MealStepsProps {
   steps: StepCardProps[];

@@ -72,19 +72,6 @@ const TextContent = styled.div`
   flex-direction: column;
 `;
 
-const CardTitle = styled.h3`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1;
-  align-self: start;
-  margin: 0;
-`;
 
-const CardDescription = styled.p`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  margin: 4px 0 0 0;
-`;
+
+

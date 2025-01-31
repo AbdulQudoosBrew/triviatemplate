@@ -133,28 +133,5 @@ const Divider = styled.div`
     1;
 `;
 
-const AuthorName = styled.div`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  align-self: center;
-  margin: 0;
-`;
 
-const TestimonialText = styled.div`
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  letter-spacing: -0.12px;
-  align-self: stretch;
-  margin: 0;
-  text-align: left;
-  max-width: 100%;
-  font: 18px/25px Hind, sans-serif;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-`;

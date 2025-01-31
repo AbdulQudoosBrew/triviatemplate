@@ -6,13 +6,14 @@ import styled from "styled-components";
 import MediumHeading from "../text/MediumHeading";
 import RangeSlider from "@/components/template/form/input/RangeSlider";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
+import { BudgetPageProps } from "@/types/types";
 
-export default function BudgetPage({
+const BudgetPage: React.FC<BudgetPageProps> = ({
   onContinue,
   handlePreviousQuestion,
   current,
-  total,
-}: any) {
+  total = 0,
+}) => {
   return (
     <MainContainer>
       <ContentWrapper>
@@ -48,7 +49,7 @@ export default function BudgetPage({
       </ActionButton>
     </MainContainer>
   );
-}
+};
 const BrandLogo = styled.img`
   aspect-ratio: 1.59;
   object-fit: contain;
@@ -94,3 +95,5 @@ const TextWrapper = styled.div`
   margin-top: 20px;
   text-align: left;
 `;
+
+export default BudgetPage;

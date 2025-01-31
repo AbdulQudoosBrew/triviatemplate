@@ -2,7 +2,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StepCard } from "./StepCard";
-import { MealStepsProps } from "@/types/types";
 import Divider from "@/components/template/Divider";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
 import { assests } from "../../../../../public/assests";
@@ -88,11 +87,7 @@ const PromoBanner = styled.div`
   margin-bottom: 12px;
 `;
 
-const DashedLine = styled.div`
-  min-height: 1px;
-  width: 100%;
-  border: 1px dashed rgba(219, 53, 18, 1);
-`;
+
 
 const PromoText = styled.div`
   display: flex;
@@ -108,13 +103,6 @@ const PromoText = styled.div`
   font: 600 18px/1 var(--font-hind-semi-bold);
 `;
 
-const SectionTitle = styled.h2`
-  color: rgba(0, 0, 0, 1);
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  margin-top: 15px;
-  font: 400 34px/1 Palmer Lake Print, -apple-system, Roboto, Helvetica,
-    sans-serif;
-`;
 
 const StepsContainer = styled.div`
   align-self: stretch;

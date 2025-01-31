@@ -1,15 +1,16 @@
-import { useState } from "react";
-import styled from "styled-components";
-import { OptionCardProps } from "@/types/FormTypes";
-import SmallParagraph from "../text/SmallParagraph";
-import useQuiz from "@/customHooks/useQuiz";
 
-export const OptionCard = ({
+import styled from "styled-components";
+import SmallParagraph from "../text/SmallParagraph";
+import React from "react";
+import { OptionCardProps } from "@/types/types";
+
+
+export const OptionCard : React.FC<OptionCardProps> = ({
   icon,
   text,
   handleOptionClick,
   isselected,
-}: any) => {
+}) => {
   return (
     <CardWrapper>
       <CardContainer

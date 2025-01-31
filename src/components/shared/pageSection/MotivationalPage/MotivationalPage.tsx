@@ -9,68 +9,70 @@ import { MotivationalPageProps } from "@/types/types";
 import styled from "styled-components";
 import Divider from "@/components/template/Divider";
 
-const MotivationalPage: React.FC<MotivationalPageProps> = ({ onContinue }) => {
-    return (
-        <Container>
-            <FlexSection>
-                <IconImage
-                    loading="lazy"
-                    src={assests.SOYUMMY_MAIN_LOGO_SMALL}
-                    alt="Food waste icon"
-                />
-            </FlexSection>
-            <FlexSection>
-                <HeaderLarge
-                    fontFamily="plamerLakePrintRegular"
-                    fontSize="semiLarge"
-                    lineheight="30px"
-                >
-                    DID YOU KNOW?💡
-                </HeaderLarge>
-                <Divider margin="20px 0px"/>
-                <InfoCard>
-                    <MediumHeading
-                        fontFamily="hindRegular"
-                        fontSize="medium"
-                        lineheight="27.6px"
-                    >
-                        The average household wastes over $1,300 in food each year.{" "}
-                        <StrongSpan>
-                            Say goodbye to food rotting in the back of your fridge!
-                        </StrongSpan>
-                    </MediumHeading>
-                    <ContentImage
-                        loading="lazy"
-                        src={assests.MOTIVATIONAL_IMAGE_ONE}
-                        alt="Food waste illustration"
-                    />
-                </InfoCard>
-                <SmallParagraph
-                    fontSize="small"
-                    fontFamily="hindRegular"
-                    lineheight="12px"
-                    margin="1.25rem 0.938rem 0px"
-                    color="#A0A0A0"
-                >
-                    William & Mary. Study Calculates True Cost of Food Waste in America.
-                    2020.
-                </SmallParagraph>
-            </FlexSection>
-            <FlexSection>
-                <ActionButton
-                    setmargintop="30px"
-                    height="56px"
-                    type="button"
-                    onClick={() => onContinue()}
-                >
-                    Let&apos;s keep going!
-                </ActionButton>
-            </FlexSection>
-        </Container>
-    );
+const MotivationalPage: React.FC<MotivationalPageProps> = ({
+  onContinue = () => {},
+}) => {
+  return (
+    <Container>
+      <FlexSection>
+        <IconImage
+          loading="lazy"
+          src={assests.SOYUMMY_MAIN_LOGO_SMALL}
+          alt="Food waste icon"
+        />
+      </FlexSection>
+      <FlexSection>
+        <HeaderLarge
+          fontFamily="plamerLakePrintRegular"
+          fontSize="semiLarge"
+          lineheight="30px"
+        >
+          DID YOU KNOW?💡
+        </HeaderLarge>
+        <Divider margin="20px 0px" />
+        <InfoCard>
+          <MediumHeading
+            fontFamily="hindRegular"
+            fontSize="medium"
+            lineheight="27.6px"
+          >
+            The average household wastes over $1,300 in food each year.{" "}
+            <StrongSpan>
+              Say goodbye to food rotting in the back of your fridge!
+            </StrongSpan>
+          </MediumHeading>
+          <ContentImage
+            loading="lazy"
+            src={assests.MOTIVATIONAL_IMAGE_ONE}
+            alt="Food waste illustration"
+          />
+        </InfoCard>
+        <SmallParagraph
+          fontSize="small"
+          fontFamily="hindRegular"
+          lineheight="12px"
+          margin="1.25rem 0.938rem 0px"
+          color="#A0A0A0"
+        >
+          William & Mary. Study Calculates True Cost of Food Waste in America.
+          2020.
+        </SmallParagraph>
+      </FlexSection>
+      <FlexSection>
+        <ActionButton
+          setmargintop="30px"
+          height="56px"
+          type="button"
+          onClick={onContinue}
+        >
+          Let&apos;s keep going!
+        </ActionButton>
+      </FlexSection>
+    </Container>
+  );
 };
 
- const Container = styled.div`
+const Container = styled.div`
   position: relative;
   background-color: #fefaf5;
   display: flex;
@@ -92,21 +94,21 @@ const FlexSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   &:first-child {
-    flex-grow: 0.5; 
+    flex-grow: 0.5;
   }
-  
+
   &:last-child {
-    flex-grow: 0.5; 
+    flex-grow: 0.5;
   }
 
   @media (max-width: 500px) {
-    flex-grow: 1; 
+    flex-grow: 1;
   }
 `;
 
- const IconImage = styled.img<{ marginbottom?: string }>`
+const IconImage = styled.img<{ marginbottom?: string }>`
   aspect-ratio: 1.59;
   object-fit: contain;
   object-position: center;
@@ -122,9 +124,9 @@ const FlexSection = styled.div`
 //   border: 1px dashed #DB3512;
 // `;
 
- const InfoCard = styled.div`
+const InfoCard = styled.div`
   border-radius: 0.938rem;
-  background-color: #F7D1C5;
+  background-color: #f7d1c5;
   display: flex;
   flex-direction: column;
   letter-spacing: -0.12px;
@@ -135,7 +137,7 @@ const FlexSection = styled.div`
   height: 408px;
 `;
 
- const ContentImage = styled.img`
+const ContentImage = styled.img`
   aspect-ratio: 1.29;
   object-fit: contain;
   object-position: center;
@@ -144,13 +146,12 @@ const FlexSection = styled.div`
   margin-top: 9px;
 `;
 
- const StrongSpan = styled.span`
+const StrongSpan = styled.span`
   font-family: var(--font-hind-bold);
   font-size: 1.375rem;
   letter-spacing: -0.12px;
   line-height: 27.6px;
   color: var(--color-basic-black);
 `;
-
 
 export default MotivationalPage;

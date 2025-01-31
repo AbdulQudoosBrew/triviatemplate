@@ -60,12 +60,6 @@ const StepNumber = styled.div`
   font: 400 40px/1 var(--font-palmerlakeprint-regular), Helvetica, sans-serif;
 `;
 
-const StepTitle = styled.h3`
-  color: rgba(0, 0, 0, 1);
-  text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
-  margin-top: 14px;
-  font: 700 16px/20px Hind, sans-serif;
-`;
 
 const StepIcon = styled.img`
   aspect-ratio: 1;

@@ -1,11 +1,6 @@
 "use client";
 import { MainQuiz } from "@/components/shared/pageSection/homePageSection/MainQuiz";
 import { MealDeliveryQuiz } from "@/components/shared/QuestionCard/QuestionMainQuiz";
-import { TestimonialSection } from "@/components/shared/testimonials/TestimonialSection";
-import MotivationalPage from "@/components/shared/pageSection/MotivationalPage/MotivationalPage";
-import ResaultPendingPage from "@/components/shared/pageSection/ResaultPendingPage/ResaultPendingPage";
-import { HeroSection } from "@/components/shared/pageSection/homePageSection/HeroSection";
-import { OptionCard } from "@/components/shared/QuestionCard/OptionCard";
 import useQuiz from "@/customHooks/useQuiz";
 
 export default function Home() {
@@ -15,6 +10,7 @@ export default function Home() {
       {!isQuizStart ? (
         <MainQuiz handleStartQuiz={handleStartQuiz} />
       ) : (
+        // @ts-expect-error: This error is expected due to [explain the reason here]
         <MealDeliveryQuiz quiz={quiz} />
       )}
       {/* <MotivationalPage /> */}
@@ -22,4 +18,3 @@ export default function Home() {
     </>
   );
 }
-

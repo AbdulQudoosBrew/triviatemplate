@@ -12,10 +12,7 @@ interface CookingHeroProps {
   imageSrc?: string;
 }
 
-export const CookingHero: React.FC<CookingHeroProps> = ({
-  bannerWidth = "190px",
-  imageSrc = assests.PERFECT_MATCH,
-}) => {
+export const CookingHero: React.FC<CookingHeroProps> = ({}) => {
   return (
     <HeroContainer>
       <HeaderLarge fontSize="semiLarge">YOUR PERFECT MATCH</HeaderLarge>
@@ -27,7 +24,7 @@ export const CookingHero: React.FC<CookingHeroProps> = ({
           your <EmphasidText>door!</EmphasidText>
         </SmallHeading>
       </TextContainer>
-      <HeroImage src={imageSrc} />
+      <HeroImage src={assests.PERFECT_MATCH} />
     </HeroContainer>
   );
 };

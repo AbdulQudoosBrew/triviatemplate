@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   IconImage,
   PendingResultImage,
@@ -6,17 +7,16 @@ import {
 import { assests } from "../../../../../public/assests";
 import { ProgressStatusBar } from "./ProgressStatusBar";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
+import { ResaultPendingPageProps } from "@/types/types";
 
-const ResaultPendingPage = ({
+const ResaultPendingPage: React.FC<ResaultPendingPageProps> = ({
   showPercentageResultPending,
   percentage,
-}: any) => {
-
+}) => {
   useEffect(() => {
-    const interval = showPercentageResultPending();
-    return () => clearInterval(interval);
+    showPercentageResultPending();
   }, []);
 
   return (

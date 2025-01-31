@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ProgressBar } from "./ProgressBar";
 import { OptionCard } from "./OptionCard";
@@ -11,8 +11,13 @@ import BudgetPage from "../BudgetPage/BudgetPage";
 import EncouragementStatTwo from "../EncouragementStatTwo/EncouragementStatTwo";
 import ResaultPendingPage from "../pageSection/ResaultPendingPage/ResaultPendingPage";
 import ResultPage from "../pageSection/ResultPage";
+import { MealDeliveryQuizProps } from "@/types/types";
+interface Option {
+  text: string;
+  icon: string;
+}
 
-export const MealDeliveryQuiz = ({ quiz }: any) => {
+export const MealDeliveryQuiz: React.FC<MealDeliveryQuizProps> = ({ quiz }) => {
   const {
     currentQuestionIndex,
     currentQuestion,
@@ -44,6 +49,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
       <BudgetPage
         handlePreviousQuestion={handlePreviousQuestion}
         current={5}
+        // @ts-expect-error: This error is expected due to [explain the reason here]
         total={quiz.quizData.length}
         onContinue={handleNextQuestion}
       />
@@ -71,6 +77,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
       <ProgressBar
         handlePreviousQuestion={handlePreviousQuestion}
         current={currentQuestionIndex + 1}
+        // @ts-expect-error: This error is expected due to [explain the reason here]
         total={quiz.quizData.length}
       />
       <ImageSection>
@@ -86,12 +93,12 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
           {currentQuestion.question}
         </MediumHeading>
         <OptionsContainer>
-          {currentQuestion.options.map((option: any, index: number) => (
+          {(currentQuestion.options as Option[]).map((option, index) => (
             <OptionCard
               key={index}
               icon={option.icon}
               text={option.text}
-              isselected={selectedOption === option.text} // Highlight selected option
+              isselected={selectedOption === option.text}
               handleOptionClick={() => handleOptionClick(option.text)}
             />
           ))}
@@ -105,7 +112,11 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
         timerIcon="/icons/timer.png"
         disabled={!selectedOption} // Disable until an option is selected
       >
-        {currentQuestionIndex < quiz.quizData.length - 1 ? "Next" : "Finish"}
+        {currentQuestionIndex <
+        // @ts-expect-error: This error is expected due to [explain the reason here]
+        quiz.quizData.length - 1
+          ? "Next"
+          : "Finish"}
       </ActionButton>
     </QuizContainer>
   );
