@@ -7,6 +7,7 @@ import { assests } from "../../../../../public/assests";
 import MediumHeading from "../../text/MediumHeading";
 import { MotivationalPageProps } from "@/types/types";
 import styled from "styled-components";
+import Divider from "@/components/template/Divider";
 
 const MotivationalPage: React.FC<MotivationalPageProps> = ({ onContinue }) => {
     return (
@@ -26,7 +27,7 @@ const MotivationalPage: React.FC<MotivationalPageProps> = ({ onContinue }) => {
                 >
                     DID YOU KNOW?💡
                 </HeaderLarge>
-                <Divider />
+                <Divider margin="20px 0px"/>
                 <InfoCard>
                     <MediumHeading
                         fontFamily="hindRegular"
@@ -114,12 +115,12 @@ const FlexSection = styled.div`
   margin-bottom: ${({ marginbottom }) => marginbottom || ""};
 `;
 
- const Divider = styled.hr`
-  margin: 22px 0;
-  width: 100%;
-  height: 1px;
-  border: 1px dashed #DB3512;
-`;
+//  const Divider = styled.hr`
+//   margin: 22px 0;
+//   width: 100%;
+//   height: 1px;
+//   border: 1px dashed #DB3512;
+// `;
 
  const InfoCard = styled.div`
   border-radius: 0.938rem;

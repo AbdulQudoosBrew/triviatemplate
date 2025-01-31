@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const Divider = () => {
-  return <DividerComponent />;
+const Divider = ({ margin }: { margin?: string }) => {
+  return <DividerComponent margin={margin} />;
 };
-const DividerComponent = styled.div`
+const DividerComponent = styled.div<{ margin?: string }>`
   align-self: stretch;
   width: 100%;
   height: 1px;
-  /* margin: 15px 0; */
+  margin: ${({ margin }) => margin ? margin : ""};
   border: none;
   border-top: 2px dashed rgba(219, 53, 18, 1);
   border-image: repeating-linear-gradient(
