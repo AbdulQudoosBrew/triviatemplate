@@ -28,6 +28,7 @@ const IntroWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-top: 1rem;
 `;
 
 const IntroDescription = styled.p`
