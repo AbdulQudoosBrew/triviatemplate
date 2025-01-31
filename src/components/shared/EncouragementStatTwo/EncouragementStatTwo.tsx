@@ -16,9 +16,9 @@ export default function EncouragementStatTwo() {
         <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
         <HeaderLarge fontSize="medium">  SAVE MORE TIME,  <br /> ENJOY MORE MEAL!  </HeaderLarge>
         <Divider />
-
-        <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
         </ContentWrapper>
+        <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
+     
         <ActionButton   height="56px"  type="button" onClick={handleWowButton}  >   WOW!  </ActionButton>
       </MainContainer>
     </>
@@ -30,7 +30,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
   `
 const MainContainer = styled.section`
   background-color: #fefaf5;
@@ -78,6 +78,5 @@ const HeaderImage = styled.img`
   object-position: center;
   width: 100%;
   border-radius: 0;
-  margin-top: 20px;
   min-height: 451px;
 `;
