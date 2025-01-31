@@ -13,9 +13,9 @@ position: relative;
   max-width: 480px;
   width: 100%;
   height: 100vh;
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     justify-content: space-between;
-  }
+  } */
 `;
 
 export const IconImage = styled.img<{ marginbottom?: string }>`

@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       {/* <MainQuiz /> */}
-      {/* {!isQuizStart ? (
+      {!isQuizStart ? (
         <MainQuiz handleStartQuiz={handleStartQuiz} />
       ) : (
         <MealDeliveryQuiz quiz={quiz} />
-      )} */}
-       <MotivationalPage />
-      {/* <ResaultPendingPage /> */}
+      )}
+       {/* <MotivationalPage />
+      <ResaultPendingPage /> */}
     </>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
-import { Container, IconImage, PendingResultImage } from "../MotivationalPage/MotivationalStyle";
+import { IconImage, PendingResultImage } from "../MotivationalPage/MotivationalStyle";
 import { assests } from "../../../../../public/assests";
 import { ProgressStatusBar } from "./ProgressStatusBar";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const ResaultPendingPage = () => {
   const [percentage, setPercentage] = useState(0); // Start with 0%
@@ -24,7 +25,7 @@ const ResaultPendingPage = () => {
   }, []);
 
   return (
-    <Container>
+    <ResaultContainer>
       <IconImage
         loading="lazy"
         src={assests.SOYUMMY_MAIN_LOGO_SMALL}
@@ -41,8 +42,23 @@ const ResaultPendingPage = () => {
         YOUR PERFECT MATCH IS...
       </HeaderLarge>
       <PendingResultImage src={assests.RESAULTPENDING} />
-    </Container>
+    </ResaultContainer>
   );
 };
+
+const ResaultContainer = styled.div`
+position: relative;
+  background-color: #fefaf5;
+  display: flex;
+  padding: 10px 30px;
+  margin: 0 auto;
+  align-items: center;
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  flex-direction: column;
+  max-width: 480px;
+  width: 100%;
+  height: 100vh;
+`;
 
 export default ResaultPendingPage;
