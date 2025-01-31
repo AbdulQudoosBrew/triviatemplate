@@ -96,6 +96,8 @@ const HeaderImage = styled.img`
   width: 100%;
   border-radius: 0;
   margin-top: 10px;
+  height: 197px;
+  /* max-height: 100%; */
 `;
 
 const ContentSection = styled.div`
