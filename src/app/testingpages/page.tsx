@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div>
       <EncouragementStatTwo/>
-      <BudgetPage/>
+      {/* <BudgetPage/> */}
     </div>
   )
 }

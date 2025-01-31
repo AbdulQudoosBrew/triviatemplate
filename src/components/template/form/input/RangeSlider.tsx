@@ -49,16 +49,19 @@ const Labels = styled.div`
   margin-top: 10px;
 `;
 
-const Label = styled.span`
+
+const Label = styled.span<{ $primary: boolean }>`
   margin-top: 10px;
   font-size: 16px;
   color: #020101;
-  font-family:  var(--font-hind-semi-bold);
+  font-family: ${(props) =>
+    props.$primary ? "var(--font-hind-semi-bold)" : "var(--font-hind-regular)"};
+     line-height: ${(props) => (props.$primary ? "1" : "normal")};
 `;
 
 const RangeSlider = () => {
   const steps = [0, 33, 66, 100]; 
-  const labels = ["<$5", "$5-$8", "$8-$10", "$10+"];
+  const labels = ["Less than $5", "$5-$8", "$8-$10", "$10+"];
   const [value, setValue] = useState(0);
 
   const handleDrag = (e: React.MouseEvent) => {
@@ -79,10 +82,18 @@ const RangeSlider = () => {
         <Thumb position={value} />
       </Track>
       <Labels>
-        {labels.map((label, index) => (
-          <Label key={index}>{label}</Label>
-        ))}
-      </Labels>
+  {labels.map((label, index) => (
+    <Label key={index} $primary={index === 0}>
+      {index === 0 ? (
+        <>
+          {"Less"} <br/>{"than"} <br /> {"$5"}
+        </>
+      ) : (
+        label
+      )}
+    </Label>
+  ))}
+</Labels>
     </SliderContainer>
   );
 };
