@@ -7,12 +7,21 @@ import MediumHeading from "../text/MediumHeading";
 import RangeSlider from "@/components/template/form/input/RangeSlider";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 
-export default function BudgetPage({ onContinue }: any) {
+export default function BudgetPage({
+  onContinue,
+  handlePreviousQuestion,
+  current,
+  total,
+}: any) {
   return (
     <MainContainer>
       <ContentWrapper>
         <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
-        <ProgressBar current={5} total={5} />
+        <ProgressBar
+          handlePreviousQuestion={handlePreviousQuestion}
+          current={current}
+          total={total}
+        />
         <HeaderImage loading="lazy" src={assests.BUDGET_PAGE} />
         <TextWrapper>
           <MediumHeading

@@ -26,6 +26,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
     showPercentageResultPending,
     percentage,
     setShowResultLoadingPage,
+    handlePreviousQuestion,
   } = useQuiz();
   const [showResult, setShowResult] = useState(false);
   useEffect(() => {
@@ -39,7 +40,14 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
     return <MotivationalPage onContinue={handleNextQuestion} />;
   }
   if (showBudgetPage) {
-    return <BudgetPage onContinue={handleNextQuestion} />;
+    return (
+      <BudgetPage
+        handlePreviousQuestion={handlePreviousQuestion}
+        current={currentQuestionIndex + 1}
+        total={quiz.quizData.length}
+        onContinue={handleNextQuestion}
+      />
+    );
   }
   if (showEncouragmentPage) {
     return <EncouragementStatTwo onContinue={handleNextQuestion} />;
@@ -61,11 +69,11 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
     <QuizContainer>
       <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
       <ProgressBar
+        handlePreviousQuestion={handlePreviousQuestion}
         current={currentQuestionIndex + 1}
         total={quiz.quizData.length}
       />
       <ImageSection>
-
         <HeaderImage loading="lazy" src={currentQuestion.questionIcon} />
       </ImageSection>
       <ContentSection>
@@ -129,7 +137,7 @@ const BrandLogo = styled.img`
 `;
 
 const HeaderImage = styled.img`
-width: 100%;
+  width: 100%;
 `;
 
 const ContentSection = styled.div`

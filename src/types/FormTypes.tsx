@@ -32,6 +32,7 @@ export interface OptionCardProps {
 export interface ProgressBarProps {
   current: number;
   total: number;
+  handlePreviousQuestion: () => void;
 }
 
 export interface TextBlockProps {

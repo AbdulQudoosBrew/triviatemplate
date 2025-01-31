@@ -2,9 +2,13 @@ import { ProgressBarProps } from "@/types/FormTypes";
 import styled from "styled-components";
 import { assests } from "../../../../public/assests";
 
-export const ProgressBar = ({ current, total }: ProgressBarProps) => {
+export const ProgressBar = ({
+  current,
+  total,
+  handlePreviousQuestion,
+}: ProgressBarProps) => {
   const progress = (current / total) * 100;
-  
+
   return (
     <ProgressWrapper>
       <ProgressContainer>
@@ -13,8 +17,14 @@ export const ProgressBar = ({ current, total }: ProgressBarProps) => {
         </ProgressBackground>
       </ProgressContainer>
       <ProgressStatus>
-        <StatusIcon loading="lazy" src={assests.ARROW_LEFT} />
-        <StatusText>{current} / {total}</StatusText>
+        <StatusIcon
+          onClick={handlePreviousQuestion}
+          loading="lazy"
+          src={assests.ARROW_LEFT}
+        />
+        <StatusText>
+          {current} / {total}
+        </StatusText>
       </ProgressStatus>
     </ProgressWrapper>
   );

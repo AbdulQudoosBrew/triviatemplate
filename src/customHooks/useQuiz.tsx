@@ -159,9 +159,39 @@ const useQuiz = () => {
           setShowResultLoadingPage(true);
         } else {
           setShowBudgetPage(true);
+          setCurrentQuestionIndex(4);
         }
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
+      }
+      setSelectedOption(null);
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      if (showMotivationalPage) {
+        setShowMotivationalPage(false);
+        setCurrentQuestionIndex(0);
+      } else if (showEncouragmentPage) {
+        setShowEncouragmentPage(false);
+        setCurrentQuestionIndex(2);
+      } else if (showBudgetPage) {
+        console.log(
+          "🚀 ~ handlePreviousQuestion ~ showBudgetPage:",
+          showBudgetPage
+        );
+        setShowBudgetPage(false);
+        setCurrentQuestionIndex(3);
+      } else if (showResultLoadingPage) {
+        setShowResultLoadingPage(false);
+        setShowBudgetPage(true);
+      } else if (currentQuestionIndex === 1) {
+        setShowMotivationalPage(true);
+      } else if (currentQuestionIndex === 3) {
+        setShowEncouragmentPage(true);
+      } else {
+        setCurrentQuestionIndex(currentQuestionIndex - 1);
       }
       setSelectedOption(null);
     }
@@ -185,6 +215,7 @@ const useQuiz = () => {
     showPercentageResultPending,
     percentage,
     setShowResultLoadingPage,
+    handlePreviousQuestion,
   };
 };
 
