@@ -29,6 +29,9 @@ const IntroWrapper = styled.section`
   justify-content: center;
   text-align: center;
   margin-top: 1rem;
+  @media (max-width: 500px) {
+    margin-top: 0px;
+  }
 `;
 
 const IntroDescription = styled.p`
