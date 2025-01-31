@@ -24,7 +24,6 @@ export const QuizIntro = () => {
 
 const IntroWrapper = styled.section`
   width: 100%;
-  flex: 1; /* Allows it to take available space */
   display: flex;
   flex-direction: column;
   justify-content: center;
