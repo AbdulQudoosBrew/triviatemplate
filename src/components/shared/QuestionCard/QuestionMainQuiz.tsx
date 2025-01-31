@@ -53,7 +53,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
         </OptionsContainer>
       </ContentSection>
       <ActionButton
-        setmargintop="25px"
+        setmargintop="20px"
         height="56px"
         type="button"
         onClick={handleNext}
@@ -69,7 +69,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
 const QuizContainer = styled.div`
   background-color: #fefaf5;
   display: flex;
-  padding: 30px;
+  padding: 5px 30px;
   margin: 0 auto;
   align-items: center;
   text-align: center;
@@ -77,6 +77,9 @@ const QuizContainer = styled.div`
   max-width: 480px;
   width: 100%;
   height: 100vh;
+  justify-content: space-around;
+  /* @media (max-width: 500px) {
+  } */
 `;
 
 const BrandLogo = styled.img`
@@ -95,6 +98,8 @@ const HeaderImage = styled.img`
   width: 100%;
   border-radius: 0;
   margin-top: 10px;
+  height: 197px;
+  /* max-height: 100%; */
 `;
 
 const ContentSection = styled.div`
@@ -104,7 +109,7 @@ const ContentSection = styled.div`
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  /* gap: 5px; */
 `;
 
 const OptionsContainer = styled.div`

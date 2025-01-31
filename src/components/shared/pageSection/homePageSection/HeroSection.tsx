@@ -22,7 +22,6 @@ const HeroWrapper = styled.section`
   position: relative;
   border-radius: 15px;
   width: 100%;
-  flex: 1; /* Allows flexible height */
   display: flex;
   align-items: center;
   justify-content: center;
