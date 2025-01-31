@@ -8,6 +8,7 @@ export interface NextQuestionButtonProps {
   maxWidth?: string;
   setmargintop?: string;
   flex? : string;
+  disabled?: boolean;
 }
 
 export interface HeroSectionProps {

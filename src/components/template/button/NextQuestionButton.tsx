@@ -12,9 +12,15 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   maxWidth,
   setmargintop,
   flex,
+  disabled
 }) => {
   return (
-    <ButtonWrapper maxWidth={maxWidth} setmargintop={setmargintop} flex={flex}>
+    <ButtonWrapper
+      maxWidth={maxWidth}
+      setmargintop={setmargintop}
+      flex={flex}
+      disabled={disabled}
+    >
       <StartButton
         type={type as "button" | "submit" | "reset" | undefined}
         onClick={onClick}
@@ -34,7 +40,7 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   );
 };
 
-const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string; flex?: string }>`
+const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string; flex?: string; disabled?: boolean }>`
   display: flex;
   width: 100%;
   max-width: ${({ maxWidth }) => maxWidth || ""};
@@ -43,9 +49,10 @@ const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string; fle
   margin-top: ${({ setmargintop }) => setmargintop || ""};
   padding: 0.625rem 0px;
   /* flex: ${({ flex }) => flex ? flex : ""}; */
+  opacity: ${({ disabled }) => disabled ? 0.5 : 1};
 `;
 
-const StartButton = styled.button<{ height?: string; }>`
+const StartButton = styled.button<{ height?: string; disabled?: boolean }>`
   display: flex;
   height: ${props => props.height};
   width: 100%;
@@ -59,6 +66,7 @@ const StartButton = styled.button<{ height?: string; }>`
   padding: 1rem 1.875rem;
   border: none;
   cursor: pointer;
+  
 `;
 
 const TimeInfo = styled.div`

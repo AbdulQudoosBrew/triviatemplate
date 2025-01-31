@@ -29,7 +29,7 @@ const ResaultPendingPage = () => {
         loading="lazy"
         src={assests.SOYUMMY_MAIN_LOGO_SMALL}
         alt="Food waste icon"
-        marginBottom="2rem"
+        marginbottom="2rem"
       />
       <ProgressStatusBar percentage={percentage} />
       <HeaderLarge
