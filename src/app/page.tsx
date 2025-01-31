@@ -10,7 +10,6 @@ import useQuiz from "@/customHooks/useQuiz";
 
 export default function Home() {
   const { isQuizStart, handleStartQuiz, quiz } = useQuiz();
-  console.log("🚀 ~ Home ~ isQuizStart:", isQuizStart);
   return (
     <>
       {!isQuizStart ? (

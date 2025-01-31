@@ -135,7 +135,6 @@ const useQuiz = () => {
   };
 
   const handleStartQuiz = () => {
-    console.log("Quiz Started");
     setIsQuizStart(true);
   };
   const handleOptionClick = (option: string) => {
@@ -164,6 +163,7 @@ const useQuiz = () => {
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
+      setSelectedOption(null);
     }
   };
 

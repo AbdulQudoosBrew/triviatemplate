@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { assests } from "../../../../public/assests";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import HeaderLarge from "@/components/template/text/HeaderLarge";
+import Divider from "@/components/template/Divider";
 
 export default function EncouragementStatTwo({ onContinue }: any) {
   return (
@@ -15,10 +16,10 @@ export default function EncouragementStatTwo({ onContinue }: any) {
             {" "}
             SAVE MORE TIME, <br /> ENJOY MORE MEAL!{" "}
           </HeaderLarge>
-          <Divider />
-
-          <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
         </ContentWrapper>
+        <Divider />
+        <HeaderImage loading="lazy" src={assests.ENOURAGEMENT_STAT_TWO} />
+
         <ActionButton height="56px" type="button" onClick={onContinue}>
           {" "}
           WOW!{" "}
@@ -34,6 +35,7 @@ const ContentWrapper = styled.div`
   text-align: center;
   flex-direction: column;
   gap: 10px;
+  margin-top: 10px;
 `;
 const MainContainer = styled.section`
   background-color: #fefaf5;
@@ -56,23 +58,7 @@ const BrandLogo = styled.img`
   object-position: center;
   width: 35px;
   height: 22px;
-`;
-
-const Divider = styled.div`
-  align-self: stretch;
-  width: 100%;
-  height: 1px;
-  margin: 10px 0;
-  border: none;
-  border-top: 1.5px dashed rgba(219, 53, 18, 1);
-  border-image: repeating-linear-gradient(
-      to right,
-      rgba(219, 53, 18, 1),
-      rgba(219, 53, 18, 1) 10px,
-      transparent 10px,
-      transparent 20px
-    )
-    1;
+  margin-bottom: 20px;
 `;
 
 const HeaderImage = styled.img`

@@ -29,7 +29,6 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
   } = useQuiz();
   const [showResult, setShowResult] = useState(false);
   useEffect(() => {
-    console.log("🚀 ~ useEffect ~ percentage:", percentage);
     if (percentage === 100) {
       setShowResultLoadingPage(false);
       setShowResult(true);

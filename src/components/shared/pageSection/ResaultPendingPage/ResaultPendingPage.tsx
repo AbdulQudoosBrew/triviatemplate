@@ -13,7 +13,6 @@ const ResaultPendingPage = ({
   showPercentageResultPending,
   percentage,
 }: any) => {
-  console.log("🚀 ~ percentage:", percentage);
 
   useEffect(() => {
     const interval = showPercentageResultPending();
