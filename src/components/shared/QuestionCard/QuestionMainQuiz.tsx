@@ -43,7 +43,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
     return (
       <BudgetPage
         handlePreviousQuestion={handlePreviousQuestion}
-        current={currentQuestionIndex + 1}
+        current={5}
         total={quiz.quizData.length}
         onContinue={handleNextQuestion}
       />

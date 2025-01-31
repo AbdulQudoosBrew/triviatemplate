@@ -159,7 +159,7 @@ const useQuiz = () => {
           setShowResultLoadingPage(true);
         } else {
           setShowBudgetPage(true);
-          setCurrentQuestionIndex(4);
+          setCurrentQuestionIndex(3);
         }
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
