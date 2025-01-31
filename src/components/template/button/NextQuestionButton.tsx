@@ -11,6 +11,7 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   height,
   maxWidth,
   setmargintop,
+  disabled = false,
 }) => {
   return (
     <ButtonWrapper maxWidth={maxWidth} setmargintop={setmargintop}>
@@ -18,13 +19,19 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
         type={type as "button" | "submit" | "reset" | undefined}
         onClick={onClick}
         height={height}
+        disabled={disabled}
       >
         {children}
       </StartButton>
       {completionTime && (
         <TimeInfo>
           {timerIcon && <TimerIcon src={timerIcon} alt="" loading="lazy" />}
-          <SmallParagraph fontSize="small" fontFamily="molishMixed" textalign="center" lineheight="12px">
+          <SmallParagraph
+            fontSize="small"
+            fontFamily="molishMixed"
+            textalign="center"
+            lineheight="12px"
+          >
             {completionTime}
           </SmallParagraph>
         </TimeInfo>
@@ -43,20 +50,25 @@ const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string }>`
   padding: 0.625rem 0px;
 `;
 
-const StartButton = styled.button<{ height?: string; }>`
+const StartButton = styled.button<{ height?: string }>`
   display: flex;
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   width: 100%;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  background-color: #db3512;
-  color: #fefaf5;
+  background-color: ${({ disabled }) =>
+    disabled ? "#E9846D" : "#db3512"}; /* Gray when disabled */
+  color: #fefaf5; /* Lighter text when disabled */
   font-family: var(--font-hind-medium);
   font-size: 1.375rem;
   padding: 1rem 1.875rem;
   border: none;
-  cursor: pointer;
+  cursor: ${({ disabled }) =>
+    disabled ? "not-allowed" : "pointer"}; /* Disable pointer when disabled */
+  opacity: ${({ disabled }) =>
+    disabled ? 0.6 : 1}; /* Reduce opacity when disabled */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 `;
 
 const TimeInfo = styled.div`

@@ -49,3 +49,6 @@ export interface MealStepsProps {
   fontFamily?: string;
   lineheight?: string;
 }
+export interface MotivationalPageProps {
+  onContinue: () => void;
+}

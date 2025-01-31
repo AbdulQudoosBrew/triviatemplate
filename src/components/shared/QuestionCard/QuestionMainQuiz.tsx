@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import styled from "styled-components";
 import { ProgressBar } from "./ProgressBar";
@@ -6,22 +5,23 @@ import { OptionCard } from "./OptionCard";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import MediumHeading from "../text/MediumHeading";
 import { assests } from "../../../../public/assests";
+import useQuiz from "@/customHooks/useQuiz";
+import MotivationalPage from "../pageSection/MotivationalPage/MotivationalPage";
 
 export const MealDeliveryQuiz = ({ quiz }: any) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const currentQuestion = quiz.quizData[currentQuestionIndex];
+  const {
+    currentQuestionIndex,
+    currentQuestion,
+    handleNextQuestion,
+    handleOptionClick,
+    selectedOption,
+    handleNext,
+    showMotivationalPage,
+  } = useQuiz();
 
-  const handleNextQuestion = () => {
-    if (currentQuestionIndex < quiz.quizData.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      // Handle quiz completion
-      console.log("Quiz completed");
-    }
-  };
-  //   <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
-  //   <ProgressBar current={1} total={5} />
-  //   <HeaderImage loading="lazy" src={assests.MAIN_BACKGROUNG_IMAHE_TWO} />
+  if (showMotivationalPage) {
+    return <MotivationalPage onContinue={handleNext} />;
+  }
 
   return (
     <QuizContainer>
@@ -46,7 +46,8 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
               key={index}
               icon={option.icon}
               text={option.text}
-              isFirst={index === 0}
+              isselected={selectedOption === option.text} // Highlight selected option
+              handleOptionClick={() => handleOptionClick(option.text)}
             />
           ))}
         </OptionsContainer>
@@ -55,8 +56,9 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
         setmargintop="25px"
         height="56px"
         type="button"
-        onClick={handleNextQuestion}
+        onClick={handleNext}
         timerIcon="/icons/timer.png"
+        disabled={!selectedOption} // Disable until an option is selected
       >
         {currentQuestionIndex < quiz.quizData.length - 1 ? "Next" : "Finish"}
       </ActionButton>

@@ -2,11 +2,6 @@ import { useState } from "react";
 import { assests } from "../../public/assests";
 
 const useQuiz = () => {
-  const [isQuizStart, setIsQuizStart] = useState(false);
-  const handleStartQuiz = () => {
-    console.log("Quiz Started");
-    setIsQuizStart(true);
-  };
   const quizes = [
     {
       quizName: "Meal Preferences",
@@ -26,260 +21,133 @@ const useQuiz = () => {
             },
             { text: "Save money on food", icon: assests.OPTION_FOUR },
           ],
-          correctAnswer: "Eat healthier and stay on track ",
+          correctAnswer: "Try exciting new recipes",
         },
         {
           question: "How would you describe your cooking vibe?",
-          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          questionIcon: assests.QUESTION_TWO,
           options: [
             {
               text: "I love cooking but need ideas",
-              icon: "/icons/two_meals.png",
+              icon: assests.QUESTION_TWO_OPTION_1,
             },
             {
               text: "I like it but want it simpler",
-              icon: "/icons/three_meals.png",
+              icon: assests.QUESTION_TWO_OPTION_2,
             },
             {
               text: "Less prep, less mess, please",
-              icon: "/icons/more_than_three.png",
+              icon: assests.QUESTION_TWO_OPTION_3,
             },
             {
               text: "No cooking, just ready-to-eat",
-              icon: "/icons/varies.png",
+              icon: assests.QUESTION_TWO_OPTION_4,
             },
           ],
           correctAnswer: "No cooking, just ready-to-eat",
         },
         {
           question: "What kind of meals are you into?",
-          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          questionIcon: assests.QUESTION_THREE,
           options: [
             {
               text: "Protein Packed—fuel me up",
-              icon: "/icons/vegetarian.png",
+              icon: assests.QUESTION_THREE_OPTION_1,
             },
-            { text: "Quick and Easy—fast meals", icon: "/icons/vegan.png" },
-            { text: "Calorie Smart—light bites", icon: "/icons/keto.png" },
-            { text: "Veggies—plants all day", icon: "/icons/no_pref.png" },
-            { text: "No Preference—surprise me", icon: "/icons/no_pref.png" },
+            {
+              text: "Quick and Easy—fast meals",
+              icon: assests.QUESTION_THREE_OPTION_2,
+            },
+            {
+              text: "Calorie Smart—light bites",
+              icon: assests.QUESTION_THREE_OPTION_3,
+            },
+            {
+              text: "Veggies—plants all day",
+              icon: assests.QUESTION_THREE_OPTION_4,
+            },
+            {
+              text: "No Preference—surprise me",
+              icon: assests.QUESTION_THREE_OPTION_5,
+            },
           ],
-          correctAnswer: "Calorie Smart—light bites",
+          correctAnswer: "Veggies—plants all day",
         },
 
         {
           question: "How would you describe your perfect meal setup?",
-          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          questionIcon: assests.QUESTION_FOUR,
           options: [
             {
               text: "Flexible and Customizable",
-              icon: "/icons/gluten_free.png",
+              icon: assests.QUESTION_FOUR_OPTION_1,
             },
             {
               text: "Pre-planned and Structured",
-              icon: "/icons/dairy_free.png",
+              icon: assests.QUESTION_FOUR_OPTION_2,
             },
-            { text: "Quick and On-the-Go", icon: "/icons/nut_free.png" },
-            { text: "Family-Focused", icon: "/icons/no_restrictions.png" },
+            {
+              text: "Quick and On-the-Go",
+              icon: assests.QUESTION_FOUR_OPTION_3,
+            },
+            { text: "Family-Focused", icon: assests.QUESTION_FOUR_OPTION_4 },
           ],
-          correctAnswer: "Family-Focused",
+          correctAnswer: "Pre-planned and Structured",
         },
         {
           question: "What’s your   per meal?",
-          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          questionIcon: assests.QUESTION_FIVE,
           options: [
-            { text: "Lessthan$5", icon: "/icons/every_day.png" },
-            { text: "$5–$8", icon: "/icons/few_times_week.png" },
-            { text: "$8–$10", icon: "/icons/once_week.png" },
-            { text: "$10+", icon: "/icons/rarely.png" },
+            { text: "Lessthan$5", icon: assests.QUESTION_FIVE_OPTION_1 },
+            { text: "$5–$8", icon: assests.QUESTION_FIVE_OPTION_2 },
+            { text: "$8–$10", icon: assests.QUESTION_FIVE_OPTION_3 },
+            { text: "$10+", icon: assests.QUESTION_FIVE_OPTION_4 },
           ],
           correctAnswer: "few_times_week",
-        },
-      ],
-    },
-
-    {
-      quizName: "Fitness & Lifestyle",
-      quizData: [
-        {
-          question: "What is your primary fitness goal?",
-          options: [
-            {
-              text: "Lose weight",
-
-              icon: "/icons/weight_loss.png",
-            },
-            {
-              text: "Build muscle",
-              icon: "/icons/muscle.png",
-            },
-            {
-              text: "Increase endurance",
-              icon: "/icons/endurance.png",
-            },
-            {
-              text: "Stay active",
-              icon: "/icons/active.png",
-            },
-          ],
-          correctAnswer: "build_muscle",
-        },
-        {
-          question: "How often do you exercise?",
-          options: [
-            { text: "Every day", icon: "/icons/daily.png" },
-            {
-              text: "A few times a week",
-
-              icon: "/icons/few_times.png",
-            },
-            { text: "Rarely", icon: "/icons/rarely.png" },
-            { text: "Never", icon: "/icons/never.png" },
-          ],
-          correctAnswer: "few_times",
-        },
-      ],
-    },
-    {
-      quizName: "Travel Preferences",
-      quizData: [
-        {
-          question: "What type of traveler are you?",
-          options: [
-            {
-              text: "Adventure seeker",
-              icon: "/icons/adventure.png",
-            },
-            {
-              text: "Luxury traveler",
-              icon: "/icons/luxury.png",
-            },
-            {
-              text: "Cultural explorer",
-              icon: "/icons/culture.png",
-            },
-            {
-              text: "Relaxation seeker",
-              icon: "/icons/relax.png",
-            },
-          ],
-          correctAnswer: "adventure",
-        },
-        {
-          question: "Which destination appeals to you most?",
-          options: [
-            {
-              text: "Mountains",
-              icon: "/icons/mountains.png",
-            },
-            { text: "Beach", icon: "/icons/beach.png" },
-            { text: "City life", icon: "/icons/city.png" },
-            {
-              text: "Countryside",
-              icon: "/icons/countryside.png",
-            },
-          ],
-          correctAnswer: "beach",
-        },
-      ],
-    },
-    {
-      quizName: "Technology Habits",
-      quizData: [
-        {
-          question: "Which device do you use most often?",
-          options: [
-            {
-              text: "Smartphone",
-              icon: "/icons/smartphone.png",
-            },
-            { text: "Laptop", icon: "/icons/laptop.png" },
-            { text: "Tablet", icon: "/icons/tablet.png" },
-            {
-              text: "Smartwatch",
-              icon: "/icons/smartwatch.png",
-            },
-          ],
-          correctAnswer: "smartphone",
-        },
-        {
-          question: "How do you consume media?",
-          options: [
-            {
-              text: "Streaming services",
-              icon: "/icons/streaming.png",
-            },
-            {
-              text: "Podcasts",
-              icon: "/icons/podcasts.png",
-            },
-            {
-              text: "Social media",
-              icon: "/icons/social.png",
-            },
-            { text: "Traditional TV", icon: "/icons/tv.png" },
-          ],
-          correctAnswer: "streaming",
-        },
-      ],
-    },
-    {
-      quizName: "Personality Traits",
-      quizData: [
-        {
-          question: "How do you handle challenges?",
-          options: [
-            {
-              text: "Stay calm and adapt",
-              icon: "/icons/calm.png",
-            },
-            {
-              text: "Face them head-on",
-
-              icon: "/icons/head_on.png",
-            },
-            {
-              text: "Seek help from others",
-              icon: "/icons/help.png",
-            },
-            {
-              text: "Avoid them if possible",
-              icon: "/icons/avoid.png",
-            },
-          ],
-          correctAnswer: "head_on",
-        },
-        {
-          question: "Which word best describes you?",
-          options: [
-            {
-              text: "Optimistic",
-
-              icon: "/icons/optimistic.png",
-            },
-            {
-              text: "Analytical",
-
-              icon: "/icons/analytical.png",
-            },
-            {
-              text: "Creative",
-
-              icon: "/icons/creative.png",
-            },
-            {
-              text: "Practical",
-
-              icon: "/icons/practical.png",
-            },
-          ],
-          correctAnswer: "creative",
         },
       ],
     },
   ];
 
   const quiz = quizes[0];
+  const [isQuizStart, setIsQuizStart] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const currentQuestion = quiz.quizData[currentQuestionIndex];
+  const [showMotivationalPage, setShowMotivationalPage] = useState(false);
+
+  const handleStartQuiz = () => {
+    console.log("Quiz Started");
+    setIsQuizStart(true);
+  };
+  const handleOptionClick = (option: string) => {
+    setSelectedOption(option);
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < quiz.quizData.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedOption(null);
+      if (currentQuestionIndex === 0) {
+        setShowMotivationalPage(false);
+        setCurrentQuestionIndex(1);
+      }
+    }
+    // }
+  };
+
+  const handleNext = () => {
+    if (currentQuestionIndex < quiz.quizData.length - 1) {
+      if (showMotivationalPage) {
+        setShowMotivationalPage(false);
+        setCurrentQuestionIndex(1);
+      } else if (currentQuestionIndex === 0) {
+        setShowMotivationalPage(true);
+      } else {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      }
+    }
+  };
 
   return {
     isQuizStart,
@@ -287,6 +155,13 @@ const useQuiz = () => {
     handleStartQuiz,
     quizes,
     quiz,
+    currentQuestionIndex,
+    currentQuestion,
+    handleNextQuestion,
+    handleOptionClick,
+    selectedOption,
+    handleNext,
+    showMotivationalPage,
   };
 };
 

@@ -1,11 +1,21 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { OptionCardProps } from "@/types/FormTypes";
 import SmallParagraph from "../text/SmallParagraph";
+import useQuiz from "@/customHooks/useQuiz";
 
-export const OptionCard = ({ icon, text }: OptionCardProps) => {
+export const OptionCard = ({
+  icon,
+  text,
+  handleOptionClick,
+  isselected,
+}: any) => {
   return (
     <CardWrapper>
-      <CardContainer>
+      <CardContainer
+        onClick={handleOptionClick}
+        isselected={isselected ? true : undefined}
+      >
         <CardIcon loading="lazy" src={icon} alt="" />
         <SmallParagraph
           textalign="left"
@@ -21,6 +31,7 @@ export const OptionCard = ({ icon, text }: OptionCardProps) => {
   );
 };
 
+// Styled Components
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 12px;
@@ -28,9 +39,28 @@ const CardWrapper = styled.div`
   flex-direction: column;
 `;
 
-const CardContainer = styled.div`
+// const CardContainer = styled.div<{ iscorrect: boolean; iswrong: boolean }>`
+//   border-radius: 10px;
+//   background-color: ${({ iscorrect, iswrong }) =>
+//     iscorrect ? "#d4edda" : iswrong ? "#f8d7da" : "white"};
+//   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+//   display: flex;
+//   min-height: 57px;
+//   width: 100%;
+//   align-items: center;
+//   gap: 14px;
+//   padding: 10px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease, transform 0.2s ease;
+
+//   &:hover {
+//     transform: translateY(-2px);
+//   }
+// `;
+const CardContainer = styled.div<{ isselected?: boolean }>`
+  // Add ?
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${({ isselected }) => (isselected ? "#eca393" : "white")};
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   min-height: 57px;
@@ -39,10 +69,10 @@ const CardContainer = styled.div`
   gap: 14px;
   padding: 10px;
   cursor: pointer;
-  
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
   &:hover {
     transform: translateY(-2px);
-    transition: transform 0.2s ease;
   }
 `;
 

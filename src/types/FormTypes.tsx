@@ -1,5 +1,5 @@
 export interface NextQuestionButtonProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
   type: string;
   onClick: () => void;
   completionTime?: string;
@@ -7,6 +7,7 @@ export interface NextQuestionButtonProps {
   height?: string;
   maxWidth?: string;
   setmargintop?: string;
+  disabled?: boolean;
 }
 
 export interface HeroSectionProps {
@@ -22,7 +23,10 @@ export interface QuizIntroProps {
 export interface OptionCardProps {
   icon: string;
   text: string;
+  correctAnswer: string;
+  handleOptionClick: () => void;
   isFirst?: boolean;
+  isselected?: boolean;
 }
 
 export interface ProgressBarProps {
@@ -34,4 +38,3 @@ export interface TextBlockProps {
   text: string;
   boldText?: string;
 }
-
