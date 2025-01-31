@@ -11,9 +11,10 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   height,
   maxWidth,
   setmargintop,
+  flex,
 }) => {
   return (
-    <ButtonWrapper maxWidth={maxWidth} setmargintop={setmargintop}>
+    <ButtonWrapper maxWidth={maxWidth} setmargintop={setmargintop} flex={flex}>
       <StartButton
         type={type as "button" | "submit" | "reset" | undefined}
         onClick={onClick}
@@ -33,7 +34,7 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   );
 };
 
-const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string }>`
+const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string; flex?: string }>`
   display: flex;
   width: 100%;
   max-width: ${({ maxWidth }) => maxWidth || ""};
@@ -41,6 +42,7 @@ const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string }>`
   align-items: center;
   margin-top: ${({ setmargintop }) => setmargintop || ""};
   padding: 0.625rem 0px;
+  /* flex: ${({ flex }) => flex ? flex : ""}; */
 `;
 
 const StartButton = styled.button<{ height?: string; }>`

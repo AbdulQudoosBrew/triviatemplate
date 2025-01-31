@@ -34,7 +34,7 @@ export const MainQuiz: React.FC<MainQuizProps> = ({ handleStartQuiz }) => {
   );
 };
 
-const QuizContainer = styled.section`
+const QuizContainer = styled.div`
   background-color: #fefaf5;
   display: flex;
   padding: 5px 30px;
@@ -42,10 +42,12 @@ const QuizContainer = styled.section`
   align-items: center;
   text-align: center;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 480px;
   width: 100%;
   height: 100vh;
+  @media (max-width: 500px) {
+    justify-content: space-between;
+  }
 `;
 
 const LogoImage = styled.img`
