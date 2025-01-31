@@ -226,11 +226,14 @@ const useQuiz = () => {
     },
   ];
 
+  const quiz = quizes[0];
+
   return {
     isQuizStart,
     setIsQuizStart,
     handleStartQuiz,
     quizes,
+    quiz,
   };
 };
 
