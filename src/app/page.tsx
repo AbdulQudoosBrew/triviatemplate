@@ -13,7 +13,6 @@ export default function Home() {
   console.log("🚀 ~ Home ~ isQuizStart:", isQuizStart);
   return (
     <>
-      {/* <MainQuiz /> */}
       {!isQuizStart ? (
         <MainQuiz handleStartQuiz={handleStartQuiz} />
       ) : (
@@ -24,3 +23,4 @@ export default function Home() {
     </>
   );
 }
+

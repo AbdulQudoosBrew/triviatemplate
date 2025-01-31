@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ProgressBar } from "./ProgressBar";
 import { OptionCard } from "./OptionCard";
@@ -7,6 +7,10 @@ import MediumHeading from "../text/MediumHeading";
 import { assests } from "../../../../public/assests";
 import useQuiz from "@/customHooks/useQuiz";
 import MotivationalPage from "../pageSection/MotivationalPage/MotivationalPage";
+import BudgetPage from "../BudgetPage/BudgetPage";
+import EncouragementStatTwo from "../EncouragementStatTwo/EncouragementStatTwo";
+import ResaultPendingPage from "../pageSection/ResaultPendingPage/ResaultPendingPage";
+import ResultPage from "../pageSection/ResultPage";
 
 export const MealDeliveryQuiz = ({ quiz }: any) => {
   const {
@@ -15,12 +19,43 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
     handleNextQuestion,
     handleOptionClick,
     selectedOption,
-    handleNext,
     showMotivationalPage,
+    showBudgetPage,
+    showEncouragmentPage,
+    showResultLoadingPage,
+    showPercentageResultPending,
+    percentage,
+    setShowResultLoadingPage,
   } = useQuiz();
+  const [showResult, setShowResult] = useState(false);
+  useEffect(() => {
+    console.log("🚀 ~ useEffect ~ percentage:", percentage);
+    if (percentage === 100) {
+      setShowResultLoadingPage(false);
+      setShowResult(true);
+    }
+  }, [percentage]);
 
   if (showMotivationalPage) {
-    return <MotivationalPage onContinue={handleNext} />;
+    return <MotivationalPage onContinue={handleNextQuestion} />;
+  }
+  if (showBudgetPage) {
+    return <BudgetPage onContinue={handleNextQuestion} />;
+  }
+  if (showEncouragmentPage) {
+    return <EncouragementStatTwo onContinue={handleNextQuestion} />;
+  }
+  if (showResultLoadingPage) {
+    return (
+      <ResaultPendingPage
+        showPercentageResultPending={showPercentageResultPending}
+        percentage={percentage}
+      />
+    );
+  }
+
+  if (showResult) {
+    return <ResultPage />;
   }
 
   return (
@@ -59,7 +94,7 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
         setmargintop="20px"
         height="56px"
         type="button"
-        onClick={handleNext}
+        onClick={handleNextQuestion}
         timerIcon="/icons/timer.png"
         disabled={!selectedOption} // Disable until an option is selected
       >

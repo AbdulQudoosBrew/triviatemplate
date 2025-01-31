@@ -115,6 +115,24 @@ const useQuiz = () => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const currentQuestion = quiz.quizData[currentQuestionIndex];
   const [showMotivationalPage, setShowMotivationalPage] = useState(false);
+  const [showBudgetPage, setShowBudgetPage] = useState(false);
+  const [showResultLoadingPage, setShowResultLoadingPage] = useState(false);
+  const [showEncouragmentPage, setShowEncouragmentPage] = useState(false);
+  const [percentage, setPercentage] = useState(0); // Start with 0%
+
+  const showPercentageResultPending = () => {
+    const interval = setInterval(() => {
+      setPercentage((prev) => {
+        if (prev < 100) {
+          return prev + 1;
+        } else {
+          clearInterval(interval);
+          return 100;
+        }
+      });
+      return interval;
+    }, 30);
+  };
 
   const handleStartQuiz = () => {
     console.log("Quiz Started");
@@ -126,23 +144,23 @@ const useQuiz = () => {
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < quiz.quizData.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOption(null);
-      if (currentQuestionIndex === 0) {
-        setShowMotivationalPage(false);
-        setCurrentQuestionIndex(1);
-      }
-    }
-    // }
-  };
-
-  const handleNext = () => {
-    if (currentQuestionIndex < quiz.quizData.length - 1) {
       if (showMotivationalPage) {
         setShowMotivationalPage(false);
         setCurrentQuestionIndex(1);
+      } else if (showEncouragmentPage) {
+        setShowEncouragmentPage(false);
+        setCurrentQuestionIndex(3);
       } else if (currentQuestionIndex === 0) {
         setShowMotivationalPage(true);
+      } else if (currentQuestionIndex === 2) {
+        setShowEncouragmentPage(true);
+      } else if (currentQuestionIndex === 3) {
+        if (showBudgetPage) {
+          setShowBudgetPage(false);
+          setShowResultLoadingPage(true);
+        } else {
+          setShowBudgetPage(true);
+        }
       } else {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
@@ -160,8 +178,13 @@ const useQuiz = () => {
     handleNextQuestion,
     handleOptionClick,
     selectedOption,
-    handleNext,
     showMotivationalPage,
+    showBudgetPage,
+    showEncouragmentPage,
+    showResultLoadingPage,
+    showPercentageResultPending,
+    percentage,
+    setShowResultLoadingPage,
   };
 };
 
