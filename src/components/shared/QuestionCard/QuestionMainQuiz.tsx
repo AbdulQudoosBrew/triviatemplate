@@ -30,7 +30,10 @@ export const MealDeliveryQuiz = ({ quiz }: any) => {
         current={currentQuestionIndex + 1}
         total={quiz.quizData.length}
       />
-      <HeaderImage loading="lazy" src={currentQuestion.questionIcon} />
+      <ImageSection>
+
+        <HeaderImage loading="lazy" src={currentQuestion.questionIcon} />
+      </ImageSection>
       <ContentSection>
         <MediumHeading
           fontSize="medium"
@@ -92,14 +95,7 @@ const BrandLogo = styled.img`
 `;
 
 const HeaderImage = styled.img`
-  aspect-ratio: 1.62;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  border-radius: 0;
-  margin-top: 10px;
-  height: 197px;
-  /* max-height: 100%; */
+width: 100%;
 `;
 
 const ContentSection = styled.div`
@@ -110,6 +106,11 @@ const ContentSection = styled.div`
   flex-direction: column;
   align-items: center;
   /* gap: 5px; */
+`;
+
+const ImageSection = styled.div`
+  min-width: 319px;
+  width: 100%;
 `;
 
 const OptionsContainer = styled.div`
