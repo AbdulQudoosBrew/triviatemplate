@@ -6,7 +6,7 @@ export interface NextQuestionButtonProps {
   timerIcon?: string;
   height?: string;
   maxWidth?: string;
-  setMarginTop?: string;
+  setmargintop?: string;
 }
 
 export interface HeroSectionProps {

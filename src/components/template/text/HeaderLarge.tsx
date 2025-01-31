@@ -12,9 +12,9 @@ const HeaderLarge = ({
   padding,
   border,
   fontFamily,
-  lineHeight,
+  lineheight,
   letterSpacing,
-  textShadow,
+  textshadow,
 }: LargeHeadingProps) => {
   return (
     <Heading
@@ -26,9 +26,9 @@ const HeaderLarge = ({
       padding={padding}
       border={border}
       fontFamily={fontFamily}
-      lineHeight={lineHeight}
+      lineheight={lineheight}
       letterSpacing={letterSpacing}
-      textShadow={textShadow}
+      textshadow={textshadow}
     >
       {children}
     </Heading>
@@ -43,9 +43,9 @@ const Heading = styled.h1<{
   padding?: string;
   border?: string;
   fontFamily?: string;
-  lineHeight?: string;
+  lineheight?: string;
   letterSpacing?: string;
-  textShadow?: string;
+  textshadow?: string;
 }>`
   padding: ${({ padding }) => (padding ? padding : "")};
 
@@ -66,7 +66,7 @@ const Heading = styled.h1<{
   /* letter-spacing: -0.12px; */
   letter-spacing: ${({ letterSpacing }) =>
     letterSpacing ? letterSpacing : "-0.12px"};
-  line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : "1.875rem")};
+  line-height: ${({ lineheight }) => (lineheight ? lineheight : "1.875rem")};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => color || "#000;"};
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
@@ -74,7 +74,7 @@ const Heading = styled.h1<{
   border: ${({ border }) => (border ? border : "")};
   position: relative;
   margin: ${({ margin }) => (margin ? margin : "")};
-  text-shadow: ${({ textShadow }) => (textShadow ? textShadow : "")};
+  text-shadow: ${({ textshadow }) => (textshadow ? textshadow : "")};
 `;
 
 export default HeaderLarge;

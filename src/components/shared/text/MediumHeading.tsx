@@ -10,8 +10,8 @@ const MediumHeading = ({
   fontWeight,
   children,
   fontFamily,
-  textAlign,
-  lineHeight,
+  textalign,
+  lineheight,
 }: MediumHeadingProps) => {
   return (
     <Heading
@@ -21,8 +21,8 @@ const MediumHeading = ({
       margin={margin}
       fontWeight={fontWeight}
       fontFamily={fontFamily}
-      textAlign={textAlign}
-      lineHeight={lineHeight}
+      textalign={textalign}
+      lineheight={lineheight}
     >
       {children}
     </Heading>
@@ -35,8 +35,8 @@ const Heading = styled.h2<{
   margin?: string;
   fontWeight?: string;
   fontFamily?: string;
-  textAlign?: string;
-  lineHeight?: string;
+  textalign?: string;
+  lineheight?: string;
 }>`
   /* font-size: ${({ fontSize }) =>
     fontSize === "large" ? "1.875rem" : "1.375rem"}; */
@@ -56,12 +56,12 @@ const Heading = styled.h2<{
       ? "var(--font-hind-bold)"
       : "var(--font-palmerlakeprint-regular)"};
   letter-spacing: -0.12px;
-  line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : "1.875rem")};
+  line-height: ${({ lineheight }) => (lineheight ? lineheight : "1.875rem")};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => color || "var(--color-basic-black)"};
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
   align-self: ${({ alignment }) => alignment || "auto"};
-  text-align: ${({ textAlign }) => textAlign || "auto"};
+  text-align: ${({ textalign }) => textalign || "auto"};
   margin: ${({ margin }) => margin || "auto"};
 `;
 

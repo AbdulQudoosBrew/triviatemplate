@@ -30,7 +30,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
-  gap: 5px;
+  gap: 25px;
   `
 const MainContainer = styled.section`
   background-color: #fefaf5;
@@ -73,10 +73,11 @@ const Divider = styled.div`
 `;
 
 const HeaderImage = styled.img`
-  aspect-ratio: 0.9;
+  /* aspect-ratio: 0.9; */
   object-fit: contain;
   object-position: center;
   width: 100%;
   border-radius: 0;
-  margin-top: 5px;
+  margin-top: 20px;
+  min-height: 451px;
 `;

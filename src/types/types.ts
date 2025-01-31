@@ -15,8 +15,8 @@ export interface MediumHeadingProps {
   margin?: string;
   fontWeight?: string;
   children: React.ReactNode;
-  lineHeight?: string;
-  textAlign?: string;
+  lineheight?: string;
+  textalign?: string;
   Opacity?: string;
 }
 
@@ -30,9 +30,9 @@ export interface LargeHeadingProps {
   padding?: string;
   border?: string;
   fontFamily?: string;
-  lineHeight?: string;
+  lineheight?: string;
   letterSpacing?: string;
-  textShadow?: string;
+  textshadow?: string;
 }
 
 export interface StepCardProps {
@@ -47,5 +47,5 @@ export interface MealStepsProps {
 
   border?: string;
   fontFamily?: string;
-  lineHeight?: string;
+  lineheight?: string;
 }

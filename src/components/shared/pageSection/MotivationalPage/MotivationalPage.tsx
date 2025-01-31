@@ -29,14 +29,14 @@ const MotivationalPage: React.FC = () => {
             <HeaderLarge
                 fontFamily='plamerLakePrintRegular'
                 fontSize='semiLarge'
-                lineHeight='30px'
+                lineheight='30px'
                 margin="20px 0px 0px"
             >
                 DID YOU KNOW?💡
             </HeaderLarge>
             <Divider />
             <InfoCard>
-                <MediumHeading fontFamily='hindRegular' fontSize='medium' lineHeight="27.6px">
+                <MediumHeading fontFamily='hindRegular' fontSize='medium' lineheight="27.6px">
                     The average household wastes over $1,300 in food each year.{" "}<StrongSpan>
                         Say goodbye to food rotting in the back of your fridge!
                     </StrongSpan>
@@ -47,11 +47,11 @@ const MotivationalPage: React.FC = () => {
                     alt="Food waste illustration"
                 />
             </InfoCard>
-            <SmallParagraph fontSize="small" fontFamily='hindRegular' lineHeight='12px' margin="1.25rem 0.938rem 0px" color="#A0A0A0">
+            <SmallParagraph fontSize="small" fontFamily='hindRegular' lineheight='12px' margin="1.25rem 0.938rem 0px" color="#A0A0A0">
                 William & Mary. Study Calculates True Cost of Food Waste in America. 2020.
             </SmallParagraph>
             <ActionButton
-                setMarginTop="30px"
+                setmargintop="30px"
                 height="56px"
                 type="button"
                 onClick={handleStartQuiz}
