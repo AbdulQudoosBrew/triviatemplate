@@ -2,6 +2,7 @@ import styled from "styled-components";
 import SmallParagraph from "../text/SmallParagraph";
 import React from "react";
 import { OptionCardProps } from "@/types/types";
+import Image from "next/image";
 
 export const OptionCard: React.FC<OptionCardProps> = ({
   icon,
@@ -12,7 +13,7 @@ export const OptionCard: React.FC<OptionCardProps> = ({
   return (
     <CardWrapper>
       <CardContainer onClick={handleOptionClick} isselected={isselected}>
-        <CardIcon loading="lazy" src={icon} alt="" />
+        <CardIcon src={icon} alt="" />
         <SmallParagraph
           textalign="left"
           fontSize="large"
@@ -68,13 +69,11 @@ const CardContainer = styled.div.withConfig({
   padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-
   &:hover {
     transform: translateY(-2px);
   }
 `;
-
-const CardIcon = styled.img`
+const CardIcon = styled(Image)`
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
