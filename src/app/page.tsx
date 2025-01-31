@@ -15,7 +15,7 @@ export default function Home() {
     <>
       {/* <MainQuiz /> */}
 
-      {!isQuizStart ? <MainQuiz handleStartQuiz={handleStartQuiz} /> : <MealDeliveryQuiz />}
+      {!isQuizStart ? <MainQuiz handleStartQuiz={handleStartQuiz} /> : <MealDeliveryQuiz />}  
       {/* <MotivationalPage />
       <ResaultPendingPage /> */}
     </>
