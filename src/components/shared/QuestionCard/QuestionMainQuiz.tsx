@@ -1,70 +1,67 @@
 "use client";
+import { useState } from "react";
 import styled from "styled-components";
 import { ProgressBar } from "./ProgressBar";
 import { OptionCard } from "./OptionCard";
-import { assests } from "../../../../public/assests";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import MediumHeading from "../text/MediumHeading";
+import { assests } from "../../../../public/assests";
 
-const options = [
-    {
-        icon: assests.OPTION_ONE,
-        text: "Save time on cooking/prep"
-    },
-    {
-        icon: assests.OPTION_TWO,
-        text: "Eat healthier or manage my diet"
-    },
-    {
-        icon: assests.OPTION_THREE,
-        text: "Explore new recipes and flavors"
-    },
-    {
-        icon: assests.OPTION_FOUR,
-        text: "Save money on food"
+export const MealDeliveryQuiz = ({ quiz }: any) => {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const currentQuestion = quiz.quizData[currentQuestionIndex];
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < quiz.quizData.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // Handle quiz completion
+      console.log("Quiz completed");
     }
-];
+  };
+  //   <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
+  //   <ProgressBar current={1} total={5} />
+  //   <HeaderImage loading="lazy" src={assests.MAIN_BACKGROUNG_IMAHE_TWO} />
 
-export const MealDeliveryQuiz = () => {
-    const handleStartQuiz = () => {
-        // Quiz start logic here
-    };
-    return (
-        <QuizContainer>
-            <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
-            <ProgressBar current={1} total={5} />
-            <HeaderImage loading="lazy" src={assests.MAIN_BACKGROUNG_IMAHE_TWO} />
-            <ContentSection>
-                <MediumHeading
-                    fontSize="medium"
-                    fontFamily="hindMedium"
-                    textalign="left"
-                    color="var(--color-basic-black)"
-                >
-                    What&apos;s your ultimate goal for winning at mealtime?
-                </MediumHeading>
-                <OptionsContainer>
-                    {options.map((option, index) => (
-                        <OptionCard
-                            key={index}
-                            icon={option.icon}
-                            text={option.text}
-                            isFirst={index === 0}
-                        />
-                    ))}
-                </OptionsContainer>
-            </ContentSection>
-            <ActionButton
-                setmargintop="25px"
-                height="56px"
-                type="button"
-                onClick={handleStartQuiz}
-                timerIcon={assests.TIMER_ICON}
-            >
-                Next
-            </ActionButton>
-        </QuizContainer>
-    );
+  return (
+    <QuizContainer>
+      <BrandLogo loading="lazy" src={assests.SOYUMMY_MAIN_LOGO_SMALL} />
+      <ProgressBar
+        current={currentQuestionIndex + 1}
+        total={quiz.quizData.length}
+      />
+      <HeaderImage loading="lazy" src={currentQuestion.questionIcon} />
+      <ContentSection>
+        <MediumHeading
+          fontSize="medium"
+          fontFamily="hindMedium"
+          textalign="left"
+          color="var(--color-basic-black)"
+        >
+          {currentQuestion.question}
+        </MediumHeading>
+        <OptionsContainer>
+          {currentQuestion.options.map((option: any, index: number) => (
+            <OptionCard
+              key={index}
+              icon={option.icon}
+              text={option.text}
+              isFirst={index === 0}
+            />
+          ))}
+        </OptionsContainer>
+      </ContentSection>
+      <ActionButton
+        setmargintop="25px"
+        height="56px"
+        type="button"
+        onClick={handleNextQuestion}
+        timerIcon="/icons/timer.png"
+      >
+        {currentQuestionIndex < quiz.quizData.length - 1 ? "Next" : "Finish"}
+      </ActionButton>
+    </QuizContainer>
+  );
 };
 
 const QuizContainer = styled.div`

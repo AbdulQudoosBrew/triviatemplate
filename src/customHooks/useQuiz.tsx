@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assests } from "../../public/assests";
 
 const useQuiz = () => {
   const [isQuizStart, setIsQuizStart] = useState(false);
@@ -12,39 +13,91 @@ const useQuiz = () => {
       quizData: [
         {
           question: "What's your ultimate goal for winning at mealtime?",
+          questionIcon: assests.MAIN_BACKGROUNG_IMAHE_TWO,
           options: [
-            { text: "Save time on cooking/prep", icon: "/icons/time.png" },
+            { text: "Save time in the kitchen", icon: assests.OPTION_ONE },
             {
-              text: "Eat healthier or manage my diet",
-              icon: "/icons/health.png",
+              text: "Eat healthier and stay on track",
+              icon: assests.OPTION_TWO,
             },
             {
-              text: "Explore new recipes and flavors",
-              icon: "/icons/recipes.png",
+              text: "Try exciting new recipes",
+              icon: assests.OPTION_THREE,
             },
-            { text: "Save money on food", icon: "/icons/money.png" },
+            { text: "Save money on food", icon: assests.OPTION_FOUR },
           ],
-          correctAnswer: "eat_healthier",
+          correctAnswer: "Eat healthier and stay on track ",
         },
         {
-          question: "Which type of meals do you prefer?",
+          question: "How would you describe your cooking vibe?",
+          questionIcon: "What's your ultimate goal for winning at mealtime?",
           options: [
             {
-              text: "Vegetarian",
-
-              icon: "/icons/vegetarian.png",
+              text: "I love cooking but need ideas",
+              icon: "/icons/two_meals.png",
             },
-            { text: "Vegan", icon: "/icons/vegan.png" },
-            { text: "Keto", icon: "/icons/keto.png" },
             {
-              text: "No preference",
-              icon: "/icons/no_pref.png",
+              text: "I like it but want it simpler",
+              icon: "/icons/three_meals.png",
+            },
+            {
+              text: "Less prep, less mess, please",
+              icon: "/icons/more_than_three.png",
+            },
+            {
+              text: "No cooking, just ready-to-eat",
+              icon: "/icons/varies.png",
             },
           ],
-          correctAnswer: "no_preference",
+          correctAnswer: "No cooking, just ready-to-eat",
+        },
+        {
+          question: "What kind of meals are you into?",
+          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          options: [
+            {
+              text: "Protein Packed—fuel me up",
+              icon: "/icons/vegetarian.png",
+            },
+            { text: "Quick and Easy—fast meals", icon: "/icons/vegan.png" },
+            { text: "Calorie Smart—light bites", icon: "/icons/keto.png" },
+            { text: "Veggies—plants all day", icon: "/icons/no_pref.png" },
+            { text: "No Preference—surprise me", icon: "/icons/no_pref.png" },
+          ],
+          correctAnswer: "Calorie Smart—light bites",
+        },
+
+        {
+          question: "How would you describe your perfect meal setup?",
+          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          options: [
+            {
+              text: "Flexible and Customizable",
+              icon: "/icons/gluten_free.png",
+            },
+            {
+              text: "Pre-planned and Structured",
+              icon: "/icons/dairy_free.png",
+            },
+            { text: "Quick and On-the-Go", icon: "/icons/nut_free.png" },
+            { text: "Family-Focused", icon: "/icons/no_restrictions.png" },
+          ],
+          correctAnswer: "Family-Focused",
+        },
+        {
+          question: "What’s your   per meal?",
+          questionIcon: "What's your ultimate goal for winning at mealtime?",
+          options: [
+            { text: "Lessthan$5", icon: "/icons/every_day.png" },
+            { text: "$5–$8", icon: "/icons/few_times_week.png" },
+            { text: "$8–$10", icon: "/icons/once_week.png" },
+            { text: "$10+", icon: "/icons/rarely.png" },
+          ],
+          correctAnswer: "few_times_week",
         },
       ],
     },
+
     {
       quizName: "Fitness & Lifestyle",
       quizData: [

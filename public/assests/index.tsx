@@ -27,4 +27,8 @@ export const assests = {
   CHEIF: "/assests/images/cheif.svg",
   DISH: "/assests/images/dish.svg",
   PERFECT_MATCH: "/assests/images/matchimage.svg",
+  QUESTION_TWO: "/assests/images/questionTwo.svg",
+  QUESTION_THREE: "/assests/images/questionthree.svg",
+  QUESTION_FOUR: "/assests/images/questionfour.svg",
+  QUESTION_FIVE: "/assests/images/questionfive.svg",
 };

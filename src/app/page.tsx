@@ -9,13 +9,17 @@ import { OptionCard } from "@/components/shared/QuestionCard/OptionCard";
 import useQuiz from "@/customHooks/useQuiz";
 
 export default function Home() {
-  const { isQuizStart,handleStartQuiz } = useQuiz();
-  console.log("🚀 ~ Home ~ isQuizStart:", isQuizStart)
+  const { isQuizStart, handleStartQuiz, quiz } = useQuiz();
+  console.log("🚀 ~ Home ~ isQuizStart:", isQuizStart);
   return (
     <>
       {/* <MainQuiz /> */}
 
-      {!isQuizStart ? <MainQuiz handleStartQuiz={handleStartQuiz} /> : <MealDeliveryQuiz />}  
+      {!isQuizStart ? (
+        <MainQuiz handleStartQuiz={handleStartQuiz} />
+      ) : (
+        <MealDeliveryQuiz quiz={quiz} />
+      )}
       {/* <MotivationalPage />
       <ResaultPendingPage /> */}
     </>
