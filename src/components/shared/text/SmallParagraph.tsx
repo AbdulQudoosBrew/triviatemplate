@@ -10,8 +10,8 @@ const SmallParagraph = ({
   margin,
   fontWeight,
   children,
-  lineHeight,
-  textAlign,
+  lineheight,
+  textalign,
   Opacity,
 }: MediumHeadingProps) => {
   return (
@@ -22,8 +22,8 @@ const SmallParagraph = ({
       margin={margin}
       fontWeight={fontWeight}
       fontFamily={fontFamily}
-      lineHeight={lineHeight}
-      textAlign={textAlign}
+      lineheight={lineheight}
+      textalign={textalign}
       Opacity={Opacity}
     >
       {children}
@@ -38,8 +38,8 @@ const Paragraph = styled.p<{
   margin?: string;
   fontWeight?: string;
   fontFamily?: string;
-  lineHeight?: string;
-  textAlign?: string;
+  lineheight?: string;
+  textalign?: string;
   Opacity?: string;
 }>`
   font-size: ${({ fontSize }) =>
@@ -53,13 +53,13 @@ const Paragraph = styled.p<{
         ? "var(--font-mulish-mixed)"
         : ""};
   letter-spacing: -0.12px;
-  line-height: ${({ lineHeight }) => lineHeight ? lineHeight : "1.375rem"};
+  line-height: ${({ lineheight }) => lineheight ? lineheight : "1.375rem"};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => color || "#000"};
   text-shadow: 0px 12px 56px rgba(0, 0, 0, 0.25);
   align-self: ${({ alignment }) => alignment || "auto"};
   margin: ${({ margin }) => margin ? margin : ""};
-  text-align: ${({ textAlign }) => textAlign || "center"};
+  text-align: ${({ textalign }) => textalign || "center"};
   opacity: ${({ Opacity }) => Opacity ? Opacity : ""};
 `;
 

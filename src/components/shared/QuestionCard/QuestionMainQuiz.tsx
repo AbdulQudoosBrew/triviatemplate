@@ -38,7 +38,7 @@ export const MealDeliveryQuiz = () => {
                 <MediumHeading
                     fontSize="medium"
                     fontFamily="hindMedium"
-                    textAlign="left"
+                    textalign="left"
                     color="var(--color-basic-black)"
                 >
                     What&apos;s your ultimate goal for winning at mealtime?
@@ -55,7 +55,7 @@ export const MealDeliveryQuiz = () => {
                 </OptionsContainer>
             </ContentSection>
             <ActionButton
-                setMarginTop="25px"
+                setmargintop="25px"
                 height="56px"
                 type="button"
                 onClick={handleStartQuiz}

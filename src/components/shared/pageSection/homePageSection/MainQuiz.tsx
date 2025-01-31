@@ -21,7 +21,7 @@ export const MainQuiz: React.FC<MainQuizProps> = ({ handleStartQuiz }) => {
       <HeroSection />
       <QuizIntro />
       <ActionButton
-        setMarginTop="30px"
+        setmargintop="30px"
         height="56px"
         type="button"
         onClick={handleStartQuiz}

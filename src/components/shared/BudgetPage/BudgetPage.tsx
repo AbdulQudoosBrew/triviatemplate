@@ -23,7 +23,7 @@ export default function BudgetPage() {
 
       <RangeSlider />
       </ContentWrapper>
-      <ActionButton setMarginTop="30px"  height="56px"  type="button"  onClick={handleNext}>   Next  </ActionButton>
+      <ActionButton setmargintop="30px"  height="56px"  type="button"  onClick={handleNext}>   Next  </ActionButton>
     </MainContainer>
   );
 }

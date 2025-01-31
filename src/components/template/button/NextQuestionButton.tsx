@@ -10,10 +10,10 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   timerIcon,
   height,
   maxWidth,
-  setMarginTop,
+  setmargintop,
 }) => {
   return (
-    <ButtonWrapper maxWidth={maxWidth} setMarginTop={setMarginTop}>
+    <ButtonWrapper maxWidth={maxWidth} setmargintop={setmargintop}>
       <StartButton
         type={type as "button" | "submit" | "reset" | undefined}
         onClick={onClick}
@@ -24,7 +24,7 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
       {completionTime && (
         <TimeInfo>
           {timerIcon && <TimerIcon src={timerIcon} alt="" loading="lazy" />}
-          <SmallParagraph fontSize="small" fontFamily="molishMixed" textAlign="center" lineHeight="12px">
+          <SmallParagraph fontSize="small" fontFamily="molishMixed" textalign="center" lineheight="12px">
             {completionTime}
           </SmallParagraph>
         </TimeInfo>
@@ -33,13 +33,13 @@ export const ActionButton: React.FC<NextQuestionButtonProps> = ({
   );
 };
 
-const ButtonWrapper = styled.div<{ maxWidth?: string; setMarginTop?: string }>`
+const ButtonWrapper = styled.div<{ maxWidth?: string; setmargintop?: string }>`
   display: flex;
   width: 100%;
   max-width: ${({ maxWidth }) => maxWidth || ""};
   flex-direction: column;
   align-items: center;
-  margin-top: ${({ setMarginTop }) => setMarginTop || ""};
+  margin-top: ${({ setmargintop }) => setmargintop || ""};
   padding: 0.625rem 0px;
 `;
 

@@ -8,11 +8,11 @@ export const OptionCard = ({ icon, text }: OptionCardProps) => {
       <CardContainer>
         <CardIcon loading="lazy" src={icon} alt="" />
         <SmallParagraph
-          textAlign="left"
+          textalign="left"
           fontSize="large"
           fontFamily="hindRegular"
           color="#615F5F"
-          lineHeight="27.6px"
+          lineheight="27.6px"
         >
           {text}
         </SmallParagraph>
