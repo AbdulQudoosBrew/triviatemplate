@@ -75,9 +75,9 @@ const QuizContainer = styled.div`
   max-width: 480px;
   width: 100%;
   height: 100vh;
-  @media (max-width: 500px) {
-    justify-content: space-between;
-  }
+  justify-content: space-around;
+  /* @media (max-width: 500px) {
+  } */
 `;
 
 const BrandLogo = styled.img`

@@ -19,8 +19,8 @@ export default function Home() {
       ) : (
         <MealDeliveryQuiz quiz={quiz} />
       )}
-       {/* <MotivationalPage />
-      <ResaultPendingPage /> */}
+       {/* <MotivationalPage /> */}
+      {/* <ResaultPendingPage /> */}
     </>
   );
 }
