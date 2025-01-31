@@ -33,7 +33,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 `;
 const MainContainer = styled.section`
   background-color: #fefaf5;
@@ -81,6 +81,5 @@ const HeaderImage = styled.img`
   object-position: center;
   width: 100%;
   border-radius: 0;
-  margin-top: 20px;
   min-height: 451px;
 `;

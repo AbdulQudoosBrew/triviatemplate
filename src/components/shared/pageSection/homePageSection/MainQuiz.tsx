@@ -5,7 +5,6 @@ import { HeroSection } from "./HeroSection";
 import { ActionButton } from "@/components/template/button/NextQuestionButton";
 import { assests } from "../../../../../public/assests/index";
 import { QuizIntro } from "./quizIntro";
-import useQuiz from "@/customHooks/useQuiz";
 import { MainQuizProps } from "@/types/types";
 
 export const MainQuiz: React.FC<MainQuizProps> = ({ handleStartQuiz }) => {

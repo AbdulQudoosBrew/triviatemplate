@@ -46,7 +46,7 @@ const ResaultContainer = styled.div`
   position: relative;
   background-color: #fefaf5;
   display: flex;
-  padding: 10px 30px;
+  padding: 30px;
   margin: 0 auto;
   align-items: center;
   color: rgba(0, 0, 0, 1);
